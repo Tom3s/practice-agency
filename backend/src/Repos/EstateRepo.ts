@@ -1,0 +1,253 @@
+import path from "path";
+import { Address, Property, SearchOptions } from "../Model/EntityModels";
+import { Result } from "../Model/StateModels";
+
+function deepCopy<T>(obj: T): T {
+	return JSON.parse(JSON.stringify(obj));
+}
+
+class PropertyRepo {
+	
+	private list: Array<Property>;
+
+	constructor() {
+		const filePath = path.join(__dirname, '../../src/Data/Properties.json');
+
+
+		this.list = require(filePath);
+
+		for (const property of this.list) {
+			property.fileUrl = '/media/';
+		}
+	}
+
+	getAllSale(): Result<Array<Property>> {
+
+		const saleListings: Array<Property> = this.list.filter((property: Property) => {
+			return property.forSale;
+		});
+
+		if (saleListings.length === 0) {
+			return new Result(
+				false,
+				'Sorry, no listings have been found matching the criteria you entered. Please try again using a broader criteria.',
+				404
+			)
+		}
+
+		return new Result(
+			true,
+			'Opetation successful',
+			200,
+			deepCopy(saleListings)
+		)
+	}
+
+	getAllLetting(): Result<Array<Property>> {
+		
+		const lettingListings: Array<Property> = this.list.filter((property: Property) => {
+			return !property.forSale;
+		});
+
+		if (lettingListings.length === 0) {
+			return new Result(
+				false,
+				'Sorry, no listings have been found matching the criteria you entered. Please try again using a broader criteria.',
+				404
+			)
+		}
+
+		return new Result(
+			true,
+			'Opetation successful',
+			200,
+			deepCopy(lettingListings)
+		)
+	}
+
+	getSaleFiltered(searchOptions: SearchOptions): Result<Array<Property>> {
+		const saleListings: Array<Property> = this.list.filter((property: Property) => {
+			return property.forSale;
+		});
+
+		const filteredListings: Array<Property> = saleListings.filter((property: Property) => {
+			if (searchOptions.location !== undefined) {
+				if (property.address.town === undefined) {
+					return false;
+				}
+				if (property.address.town.toLowerCase() !== searchOptions.location.toLowerCase()) {
+					return false;
+				}
+			}
+
+			if (searchOptions.maxPrice !== undefined) {
+				if (property.price > searchOptions.maxPrice) {
+					return false;
+				}
+			}
+
+			if (searchOptions.bedrooms !== undefined) {
+				if (property.bedrooms === undefined) {
+					return false;
+				}
+				if (property.bedrooms < searchOptions.bedrooms) {
+					return false;
+				}
+			}
+
+			if (searchOptions.type !== undefined) {
+				for (const type of searchOptions.type) {
+					if (!property.type.filter(propertyType => propertyType.id === type).length) {
+						return false;
+					}
+				}
+			}
+
+			return true;
+		});
+
+		if (filteredListings.length === 0) {
+			return new Result(
+				false,
+				'Sorry, no listings have been found matching the criteria you entered. Please try again using a broader criteria.',
+				404
+			)
+		}
+
+		return new Result(
+			true,
+			'Opetation successful',
+			200,
+			deepCopy(filteredListings)
+		)
+	}
+
+	getLettingFiltered(searchOptions: SearchOptions): Result<Array<Property>> {
+		const lettingListings: Array<Property> = this.list.filter((property: Property) => {
+			return !property.forSale;
+		});
+
+		const filteredListings: Array<Property> = lettingListings.filter((property: Property) => {
+			if (searchOptions.location !== undefined) {
+				if (property.address.town === undefined) {
+					return false;
+				}
+				if (property.address.town.toLowerCase() !== searchOptions.location.toLowerCase()) {
+					return false;
+				}
+			}
+
+			if (searchOptions.maxPrice !== undefined) {
+				if (property.price > searchOptions.maxPrice) {
+					return false;
+				}
+			}
+
+			if (searchOptions.bedrooms !== undefined) {
+				if (property.bedrooms === undefined) {
+					return false;
+				}
+				if (property.bedrooms < searchOptions.bedrooms) {
+					return false;
+				}
+			}
+
+			if (searchOptions.type !== undefined) {
+				for (const type of searchOptions.type) {
+					if (!property.type.filter(propertyType => propertyType.id === type).length) {
+						return false;
+					}
+				}
+			}
+
+			return true;
+		});
+
+		if (filteredListings.length === 0) {
+			return new Result(
+				false,
+				'Sorry, no listings have been found matching the criteria you entered. Please try again using a broader criteria.',
+				404
+			)
+		}
+
+		return new Result(
+			true,
+			'Opetation successful',
+			200,
+			deepCopy(filteredListings)
+		)
+	}
+
+	getAllSaleLocations(): Result<Array<string>> {
+		const saleListings: Array<Property> = this.getAllSale().data as Array<Property>;
+
+		const locations: Array<string> = saleListings.map((property: Property) => {	
+			return property.address.town;
+		});
+
+		return new Result(
+			true,
+			'Opetation successful',
+			200,
+			locations
+		)
+	}
+
+	getAllLettingLocations(): Result<Array<string>> {
+		const lettingListings: Array<Property> = this.getAllLetting().data as Array<Property>;
+
+		const locations: Array<string> = lettingListings.map((property: Property) => {	
+			return property.address.town;
+		});
+
+		return new Result(
+			true,
+			'Opetation successful',
+			200,
+			locations
+		)
+	}
+
+	getAllSaleTypes(): Result<Array<string>> {
+		const saleListings: Array<Property> = this.getAllSale().data as Array<Property>;
+
+		// const types: Array<string> = [].concat(...saleListings.map((property: Property) => {
+		// 	return property.type.map(type => type.name);
+		// }));
+		const types: Array<string> = saleListings.reduce((accumulator: string[], property: Property) => {
+			if (property.type === undefined) {
+				return accumulator;
+			}
+			return accumulator.concat(property.type.map(type => type.name));
+		}, []);		
+
+		return new Result(
+			true,
+			'Opetation successful',
+			200,
+			types
+		)
+	}
+
+	getAllLettingTypes(): Result<Array<string>> {
+		const lettingListings: Array<Property> = this.getAllLetting().data as Array<Property>;
+
+		const types: Array<string> = lettingListings.reduce((accumulator: string[], property: Property) => {
+			if (property.type === undefined) {
+				return accumulator;
+			}
+			return accumulator.concat(property.type.map(type => type.name));
+		}, []);		
+
+		return new Result(
+			true,
+			'Opetation successful',
+			200,
+			types
+		)
+	}
+	
+}
+
+export default PropertyRepo;

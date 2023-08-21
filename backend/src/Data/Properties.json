@@ -1,0 +1,260 @@
+[
+	{
+		"id": 1,
+		"name": "Cozy Cottage",
+		"address": {
+			"street": "123 Oak Street",
+			"town": "Smallville",
+			"latitude": 40.7128,
+			"longitude": -74.0060
+		},
+		"description": "A charming cottage in a peaceful neighborhood.",
+		"price": 1500,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 2,
+				"name": "Cozy"
+			}
+		],
+		"bedrooms": 2,
+		"bathrooms": 1,
+		"forSale": false,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "0f61764ad8dadd0d97cd5a771a768721.jpg"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Modern Condo",
+		"address": {
+			"street": "456 Elm Street",
+			"town": "Metropolis",
+			"latitude": 34.0522,
+			"longitude": -118.2437
+		},
+		"description": "A sleek and modern condo in the heart of the city.",
+		"price": 3000,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 3,
+				"name": "Modern"
+			}
+		],
+		"bedrooms": 1,
+		"bathrooms": 1,
+		"forSale": false
+	},
+	{
+		"id": 3,
+		"name": "Spacious Family Home",
+		"address": {
+			"street": "789 Maple Lane",
+			"town": "Suburbia",
+			"latitude": 37.7749,
+			"longitude": -122.4194
+		},
+		"description": "A large and comfortable family home with plenty of space.",
+		"price": 450000,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 4,
+				"name": "Family"
+			}
+		],
+		"bedrooms": 4,
+		"bathrooms": 2,
+		"forSale": true,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "10c907907c0234db96f8b00bde2bbc31.jpg"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Luxury Penthouse",
+		"address": {
+			"street": "101 Highrise Avenue",
+			"town": "City Heights",
+			"latitude": 41.8781,
+			"longitude": -87.6298
+		},
+		"description": "An elegant penthouse with stunning views of the city skyline.",
+		"price": 1200000,
+		"type": [
+			{
+				"id": 5,
+				"name": "Luxury"
+			},
+			{
+				"id": 3,
+				"name": "Modern"
+			}
+		],
+		"bedrooms": 3,
+		"bathrooms": 3,
+		"forSale": true,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "165e9eda34110dbfc56303186093a8d8.jpg"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Rustic Cabin",
+		"address": {
+			"street": "234 Pine Road",
+			"town": "Mountainville",
+			"latitude": 39.7392,
+			"longitude": -104.9903
+		},
+		"description": "A charming rustic cabin nestled in the mountains.",
+		"price": 2500,
+		"type": [
+			{
+				"id": 6,
+				"name": "Rustic"
+			},
+			{
+				"id": 7,
+				"name": "Cabin"
+			}
+		],
+		"bedrooms": 2,
+		"bathrooms": 1,
+		"forSale": false,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "41236db238c04fa678876f0eabd458ce.jpg"
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Quaint Bungalow",
+		"address": {
+			"street": "567 Willow Lane",
+			"town": "Suburbia",
+			"latitude": 37.7749,
+			"longitude": -122.4194
+		},
+		"description": "A cozy bungalow with a lush backyard garden.",
+		"price": 280000,
+		"forSale": true,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 2,
+				"name": "Cozy"
+			}
+		],
+		"bedrooms": 2,
+		"bathrooms": 1
+	},
+	{
+		"id": 7,
+		"name": "Urban Loft",
+		"address": {
+			"street": "890 Loft Avenue",
+			"town": "Metropolis",
+			"latitude": 34.0522,
+			"longitude": -118.2437
+		},
+		"description": "An industrial-style loft in the heart of the city.",
+		"price": 600000,
+		"forSale": true,
+		"type": [
+			{
+				"id": 3,
+				"name": "Modern"
+			}
+		],
+		"bedrooms": 1,
+		"bathrooms": 1.5
+	},
+	{
+		"id": 8,
+		"name": "Mountain Retreat",
+		"address": {
+			"street": "901 Pine Road",
+			"town": "Mountainville",
+			"latitude": 39.7392,
+			"longitude": -104.9903
+		},
+		"description": "A peaceful retreat in the mountains with breathtaking views.",
+		"price": 220000,
+		"forSale": true,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "5870278a3b57261803f70b8edb98a607.jpg"
+			}
+		],
+		"type": [
+			{
+				"id": 6,
+				"name": "Rustic"
+			},
+			{
+				"id": 7,
+				"name": "Cabin"
+			}
+		],
+		"bedrooms": 3,
+		"bathrooms": 2
+	},
+	{
+		"id": 9,
+		"name": "Suburban Townhouse",
+		"address": {
+			"latitude": 41.8781,
+			"longitude": -87.6298
+		},
+		"description": "A modern townhouse in a quiet suburban neighborhood.",
+		"price": 320000,
+		"forSale": true,
+		"type": [
+			{
+				"id": 5,
+				"name": "Luxury"
+			}
+		],
+		"bedrooms": 3,
+		"bathrooms": 2.5
+	},
+	{
+		"id": 10,
+		"name": "Renovator's Dream",
+		"address": {
+			"street": "1122 Elm Street",
+			"town": "Metropolis",
+			"latitude": 34.0522,
+			"longitude": -118.2437
+		},
+		"description": "A fixer-upper project with great potential.",
+		"price": 1500,
+		"forSale": false
+	}
+]

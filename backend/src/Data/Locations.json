@@ -1,0 +1,30 @@
+{
+	"sale": [
+		"Missouri",
+		"Kansas",
+		"Oklahoma",
+		"Arkansas",
+		"Texas",
+		"Louisiana",
+		"Mississippi",
+		"Alabama",
+		"Georgia"
+	],
+	"letting": [
+		"Ohio",
+		"Indiana",
+		"Illinois",
+		"Michigan",
+		"Wisconsin",
+		"Minnesota",
+		"Iowa",
+		"Missouri",
+		"Kentucky",
+		"Tennessee",
+		"Alabama",
+		"Georgia",
+		"Florida",
+		"South Carolina",
+		"North Carolina"
+	]
+}
