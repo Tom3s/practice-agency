@@ -1,7 +1,7 @@
 import express, { Express, Request, Response } from 'express';
 import { Result } from '../Model/StateModels';
 import Controller from '../Controller/Controller';
-import { Address, Property, SearchOptions } from '../Model/EntityModels';
+import { Address, Property, PropertyType, SearchOptions } from '../Model/EntityModels';
 import fs from 'fs';
 
 
@@ -95,7 +95,7 @@ function setupRoutes(app: Express, controller: Controller): void {
 			return;
 		}
 		const transactionType: number = parseInt(request.query['transaction-type'] as string); 
-		const result: Result<Array<string>> = await controller.getTypes(transactionType);
+		const result: Result<PropertyType[]> = await controller.getTypes(transactionType);
 		if (result.success) {
 			response.status(result.status).send(result.data);
 			return;

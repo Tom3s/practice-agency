@@ -28,6 +28,10 @@ class PropertyType {
 		public id: number,
 		public name: string,
 	){}
+
+	equals(propertyType: PropertyType): boolean {
+		return this.id === propertyType.id;
+	}
 }
 
 class Media {

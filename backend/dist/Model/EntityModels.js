@@ -31,6 +31,9 @@ class PropertyType {
         this.id = id;
         this.name = name;
     }
+    equals(propertyType) {
+        return this.id === propertyType.id;
+    }
 }
 exports.PropertyType = PropertyType;
 class Media {

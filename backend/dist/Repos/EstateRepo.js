@@ -130,25 +130,36 @@ class PropertyRepo {
     }
     getAllSaleTypes() {
         const saleListings = this.getAllSale().data;
-        // const types: Array<string> = [].concat(...saleListings.map((property: Property) => {
-        // 	return property.type.map(type => type.name);
-        // }));
-        const types = saleListings.reduce((accumulator, property) => {
-            if (property.type === undefined) {
-                return accumulator;
+        const types = [];
+        saleListings.forEach(property => {
+            if (property.type !== undefined) {
+                property.type.forEach(type => {
+                    if (!types.filter(propertyType => propertyType.id === type.id).length) {
+                        types.push(type);
+                    }
+                });
             }
-            return accumulator.concat(property.type.map(type => type.name));
-        }, []);
+        });
+        types.sort((a, b) => {
+            return a.id - b.id;
+        });
         return new StateModels_1.Result(true, 'Opetation successful', 200, types);
     }
     getAllLettingTypes() {
         const lettingListings = this.getAllLetting().data;
-        const types = lettingListings.reduce((accumulator, property) => {
-            if (property.type === undefined) {
-                return accumulator;
+        const types = [];
+        lettingListings.forEach(property => {
+            if (property.type !== undefined) {
+                property.type.forEach(type => {
+                    if (!types.filter(propertyType => propertyType.id === type.id).length) {
+                        types.push(type);
+                    }
+                });
             }
-            return accumulator.concat(property.type.map(type => type.name));
-        }, []);
+        });
+        types.sort((a, b) => {
+            return a.id - b.id;
+        });
         return new StateModels_1.Result(true, 'Opetation successful', 200, types);
     }
 }

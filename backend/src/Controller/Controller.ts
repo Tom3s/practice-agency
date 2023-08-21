@@ -1,5 +1,5 @@
 import path from "path";
-import { Address, Property, SearchOptions } from "../Model/EntityModels";
+import { Address, Property, PropertyType, SearchOptions } from "../Model/EntityModels";
 import { Result } from "../Model/StateModels";
 import PropertyRepo from "../Repos/EstateRepo";
 import fs from 'fs';
@@ -34,7 +34,7 @@ class Controller {
 		return this.propertyRepo.getAllLettingLocations();
 	}
 
-	getTypes(transactionType: number): Result<Array<string>> {
+	getTypes(transactionType: number): Result<PropertyType[]> {
 		if (transactionType === 1) {
 			return this.propertyRepo.getAllSaleTypes();
 		}

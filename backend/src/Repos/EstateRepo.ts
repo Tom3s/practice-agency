@@ -1,5 +1,5 @@
 import path from "path";
-import { Address, Property, SearchOptions } from "../Model/EntityModels";
+import { Address, Property, PropertyType, SearchOptions } from "../Model/EntityModels";
 import { Result } from "../Model/StateModels";
 
 function deepCopy<T>(obj: T): T {
@@ -209,18 +209,24 @@ class PropertyRepo {
 		)
 	}
 
-	getAllSaleTypes(): Result<Array<string>> {
+	getAllSaleTypes(): Result<PropertyType[]> {
 		const saleListings: Array<Property> = this.getAllSale().data as Array<Property>;
 
-		// const types: Array<string> = [].concat(...saleListings.map((property: Property) => {
-		// 	return property.type.map(type => type.name);
-		// }));
-		const types: Array<string> = saleListings.reduce((accumulator: string[], property: Property) => {
-			if (property.type === undefined) {
-				return accumulator;
+		const types: PropertyType[] = [];
+
+		saleListings.forEach(property => {
+			if (property.type !== undefined) {
+				property.type.forEach(type => {
+					if (!types.filter(propertyType => propertyType.id === type.id).length) {
+						types.push(type);
+					}
+				});
 			}
-			return accumulator.concat(property.type.map(type => type.name));
-		}, []);		
+		});
+
+		types.sort((a: PropertyType, b: PropertyType) => {
+			return a.id - b.id;
+		});
 
 		return new Result(
 			true,
@@ -230,15 +236,24 @@ class PropertyRepo {
 		)
 	}
 
-	getAllLettingTypes(): Result<Array<string>> {
+	getAllLettingTypes(): Result<PropertyType[]> {
 		const lettingListings: Array<Property> = this.getAllLetting().data as Array<Property>;
 
-		const types: Array<string> = lettingListings.reduce((accumulator: string[], property: Property) => {
-			if (property.type === undefined) {
-				return accumulator;
+		const types: PropertyType[] = [];
+
+		lettingListings.forEach(property => {
+			if (property.type !== undefined) {
+				property.type.forEach(type => {
+					if (!types.filter(propertyType => propertyType.id === type.id).length) {
+						types.push(type);
+					}
+				});
 			}
-			return accumulator.concat(property.type.map(type => type.name));
-		}, []);		
+		});
+
+		types.sort((a: PropertyType, b: PropertyType) => {
+			return a.id - b.id;
+		});
 
 		return new Result(
 			true,
