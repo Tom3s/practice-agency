@@ -81,6 +81,9 @@ function setupRoutes(app: Express, controller: Controller): void {
 		}
 		const transactionType: number = parseInt(request.query['transaction-type'] as string); 
 		const result: Result<Array<string>> = await controller.getLocations(transactionType);
+
+		console.log(result.data);
+
 		if (result.success) {
 			response.status(result.status).send(result.data);
 			return;

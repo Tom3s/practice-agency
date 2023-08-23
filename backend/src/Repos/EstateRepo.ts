@@ -186,11 +186,15 @@ class PropertyRepo {
 			return property.address.town;
 		});
 
+		const filteredLocations: string[] = locations.filter((location: string) => {
+			return location !== undefined;
+		});
+
 		return new Result(
 			true,
 			'Opetation successful',
 			200,
-			locations
+			filteredLocations
 		)
 	}
 
@@ -201,11 +205,15 @@ class PropertyRepo {
 			return property.address.town;
 		});
 
+		const filteredLocations: string[] = locations.filter((location: string) => {
+			return location !== undefined;
+		});
+
 		return new Result(
 			true,
 			'Opetation successful',
 			200,
-			locations
+			filteredLocations
 		)
 	}
 
