@@ -1,5 +1,7 @@
 import { exitCode } from "process";
 
+const API_KEY = 'api-key=xYfyViCWX3ghasznzOK3jWwFhLtDRrUN';
+
 function buildQueryParams(type: string, location: string, price: string, propertyType: string[], bedroom: string, apiKey: boolean): string {
 	var params = [];
 	if (type) {
@@ -18,7 +20,7 @@ function buildQueryParams(type: string, location: string, price: string, propert
 		params.push('min-bed=' + bedroom);
 	}
 	if (apiKey)
-		params.push('api-key=xYfyViCWX3ghasznzOK3jWwFhLtDRrUN')
+		params.push(API_KEY)
 	return params.join('&');
 }
 
@@ -38,6 +40,12 @@ function buildMediaUrl(fileUrl: string, mediaType: number, mediaName: string): s
 	url += mediaType.toString() + '/';
 	url += mediaName;
 
+	if (mediaType === 5) {
+		return url;
+	}
+
+	url += '?' + API_KEY;
+
 	return url;
 }
 
@@ -49,9 +57,25 @@ function buildSinglePropertyUrl(id: string): string {
 	else {
 		url += 'letting/';
 	}
-	url += id + '?api-key=xYfyViCWX3ghasznzOK3jWwFhLtDRrUN';
+	url += id + '?' + API_KEY;
 
 	return url;
 }
 
-export { buildMediaUrl, BuildUrl, buildQueryParams, buildSinglePropertyUrl };
+function buildTypeFetchUrl(transactionType: string): string {
+	var url = 'http://localhost:8000/v2/property/type?';
+	url += 'transaction-type=' + transactionType;
+	url += '&' + API_KEY;
+
+	return url;
+}
+
+function buildLocationFetchUrl(transactionType: string): string {
+	var url = 'http://localhost:8000/v2/property/location?';
+	url += 'transaction-type=' + transactionType;
+	url += '&' + API_KEY;
+
+	return url;
+}
+
+export { buildMediaUrl, BuildUrl, buildQueryParams, buildSinglePropertyUrl, buildTypeFetchUrl, buildLocationFetchUrl };

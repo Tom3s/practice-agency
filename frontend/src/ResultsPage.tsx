@@ -14,6 +14,7 @@ const ResultsPage = () => {
 	const transactionType = searchParams.get('transaction-type') || 'sale';
 
 	const [results, setResults] = useState<any[]>([]);
+	const [emptyResults, setEmptyResults] = useState<boolean>(false);
 
 	const [loading, setLoading] = useState<boolean>(true);
 
@@ -31,6 +32,10 @@ const ResultsPage = () => {
 
 		fetch(url)
 			.then(response => {
+				if (response.status === 404) {
+					setEmptyResults(true);
+					return [];
+				}
 				if (!response.ok) {
 					return [];
 				}
@@ -48,7 +53,7 @@ const ResultsPage = () => {
 	}, [])
 
 	useEffect(() => {
-		setLoading(results.length === 0);
+		setLoading(results.length === 0 && !emptyResults);
 	}, [results])
 
 	function getResultInfo(title: string, bedrooms: number, bathrooms: number, description: string) {

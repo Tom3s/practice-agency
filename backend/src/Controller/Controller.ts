@@ -112,14 +112,6 @@ class Controller {
 
 	validateApiKey(apiKey: string): Result<boolean> {
 
-		// TODO: Remove this line
-		return new Result(
-			true,
-			'Operation successful',
-			200,
-			true
-		)
-
 		if (apiKey !== process.env.API_KEY) {
 			return new Result(
 				false,
