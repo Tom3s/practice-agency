@@ -59,6 +59,7 @@ const SearchPage = () => {
 		fetchLocations();
 
 		setCurrentPrice('');
+		setCurrentBedroom('');
 
 		setPriceLabel(currentTransactionType === 'sales' ? 'Max Price' : 'Max Price (Per Month)');
 		setPrices(currentTransactionType === 'sales' ? salePrices : lettingPrices);
@@ -134,7 +135,7 @@ const SearchPage = () => {
 			<FormControl>
 				<InputLabel id="price-label">{priceLabel}</InputLabel>
 				<Select
-					sx={{ borderRadius: '50px', width: '80vw' }}
+					sx={{ borderRadius: '50px', width: '80vw', marginBottom: '20px'  }}
 					labelId="price-label"
 					id="price"
 					value={currentPrice}
@@ -151,6 +152,28 @@ const SearchPage = () => {
 			)
 	}
 
+	function getBedroomSelect() {
+		return (
+			<FormControl>
+				<InputLabel id="bedroom-label">Bedrooms</InputLabel>
+				<Select
+					sx={{ borderRadius: '50px', width: '80vw', marginBottom: '20px'  }}
+					labelId="bedroom-label"
+					id="bedroom"
+					value={currentBedroom}
+					onChange={(event) => setCurrentBedroom(event.target.value as string)}
+					inputProps={{ 'aria-label': 'Without label' }}
+				>
+					{bedrooms.map((bedroom, index) => (
+						<MenuItem key={index} value={bedroom}>
+							{bedroom}
+						</MenuItem>
+					))}
+				</Select>
+			</FormControl>
+		)
+	}
+
 	return (
 		<Fragment>
 			<div className="search-container">
@@ -162,6 +185,7 @@ const SearchPage = () => {
 				{getTypeSelect()}
 				{getLocationSelect()}
 				{getPriceSelect()}
+				{getBedroomSelect()}
 			</div>
 		</Fragment>
 	)
