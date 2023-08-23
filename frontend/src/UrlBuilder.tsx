@@ -41,4 +41,17 @@ function buildMediaUrl(fileUrl: string, mediaType: number, mediaName: string): s
 	return url;
 }
 
-export { buildMediaUrl, BuildUrl, buildQueryParams };
+function buildSinglePropertyUrl(id: string): string {
+	var url = 'http://localhost:8000/v2/property/residential/';
+	if (Math.random() > 0.5) {
+		url += 'sale/';
+	}
+	else {
+		url += 'letting/';
+	}
+	url += id + '?api-key=xYfyViCWX3ghasznzOK3jWwFhLtDRrUN';
+
+	return url;
+}
+
+export { buildMediaUrl, BuildUrl, buildQueryParams, buildSinglePropertyUrl };

@@ -1,0 +1,22 @@
+.main-image {
+	width: 100%;
+	opacity: calc(1 - 0.44)
+}
+
+.main-image-container {
+	background: linear-gradient(180deg, #022473, #3467E0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.centered {
+	font-family: Cambria;
+	font-size: 13pt;
+
+	position: absolute;
+	text-align: center;
+
+	width: 80vw;
+}

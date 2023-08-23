@@ -121,7 +121,7 @@ const ResultsPage = () => {
 		const resultTitle = getResultTitle(result.bedrooms, result.type?.at(0), result.address);
 
 		return (
-			<div className="result" key={index} onClick={() => navigate('/property?id=' + result.id)}>
+			<div className="result" key={index} onClick={() => navigate('/property?id=' + result.id)	}>
 				{/* <div className="result-image-container"> */}
 				<img className="result-image" src={mainPhotoUrl} alt="Property" />
 				{/* </div> */}
