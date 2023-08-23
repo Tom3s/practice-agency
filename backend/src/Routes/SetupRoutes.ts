@@ -108,12 +108,16 @@ function setupRoutes(app: Express, controller: Controller): void {
 
 
 	app.get('/v2/media/:typeId/:mediaName', async (request: Request, response: Response) => {
+		const typeId: number = parseInt(request.params['typeId']);
+
+		const needApiKey: boolean = typeId !== 5;
+
+
 		const apiKey: string = request.query['api-key'] as string;
-		if (controller.validateApiKey(apiKey).data === false) {
+		if (needApiKey && controller.validateApiKey(apiKey).data === false) {
 			response.status(401).send('Invalid API key');
 			return;
 		}
-		const typeId: number = parseInt(request.params['typeId']);
 		const mediaName: string = request.params['mediaName'];
 		const result: Result<string> = await controller.getMedia(typeId, mediaName);
 

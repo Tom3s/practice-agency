@@ -48,7 +48,7 @@ const ResultsPage = () => {
 	}, [])
 
 	useEffect(() => {
-		setLoading(false);
+		setLoading(results.length === 0);
 	}, [results])
 
 	function getResultInfo(title: string, bedrooms: number, bathrooms: number, description: string) {

@@ -138,7 +138,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasImages() ?
 						<div className="feature">
-							<i className="fa fa-image" /> Images
+							<i className="fa fa-image ft-icon" /> Images
 						</div>
 						:
 						<Fragment />
@@ -146,7 +146,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasMapLocation() ?
 						<div className="feature">
-							<i className="fa fa-map" /> Map
+							<i className="fa fa-map ft-icon" /> Map
 						</div>
 						:
 						<Fragment />
@@ -154,7 +154,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasEPC() ?
 						<div className="feature">
-							<i className="fa fa-bar-chart" /> EPC
+							<i className="fa fa-bar-chart ft-icon" /> EPC
 						</div>
 						:
 						<Fragment />
@@ -162,7 +162,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasFloorplan() ?
 						<div className="feature">
-							<i className="material-icons">border_all</i> Floorplan
+							<i className="material-icons ft-icon">border_all</i> Floorplan
 						</div>
 						:
 						<Fragment />
@@ -170,7 +170,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasBrochure() ?
 						<div className="feature">
-							<i className="fa fa-file-pdf-o" /> Brochure
+							<i className="fa fa-file-pdf-o ft-icon" /> Brochure
 						</div>
 						:
 						<Fragment />
@@ -333,7 +333,24 @@ const SinglePropertyPage = () => {
 
 	}
 
+	function getBrochure() {
+		if (!checkIfHasBrochure()) {
+			return <Fragment />
+		}
 
+		const bruchureLink = buildMediaUrl(property.fileUrl, 5, property.media.find((media: any) => media.typeId === 5).name);
+
+		return (
+			<div className="brochure-container">
+				<div className="section-title">
+					Brochure
+				</div>
+				<div className="brochure-download" onClick={() => window.open(bruchureLink)}>
+					<i className="fa fa-download" /> Download Brochure
+				</div>
+			</div>
+		)
+	}
 
 	function mainContent() {
 		return (
@@ -367,6 +384,7 @@ const SinglePropertyPage = () => {
 					{/* Floorplan */}
 					{getFloorplan()}
 					{/* Brochure */}
+					{getBrochure()}
 				</div>
 
 			</div>

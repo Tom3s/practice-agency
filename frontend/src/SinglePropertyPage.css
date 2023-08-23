@@ -27,6 +27,8 @@
 	justify-content: baseline;
 	align-items: center;
 
+	overflow-x: scroll;
+
 	background: linear-gradient(99deg, #022473, #042677, #3467E0);
 
 
@@ -36,10 +38,15 @@
 .feature {
 	color: white;
 	font-family: Helvetica;
-	font-size: 16pt;
+	font-size: 14pt;
 	/* pad 15px up-down, 20px left-right */
 	padding: 15px 20px;
 
+	white-space: nowrap;
+
+}
+.ft-icon {
+	font-size: 18pt !important;
 }
 
 .info-container {
@@ -93,6 +100,14 @@
 	width: 90vw;
 }
 
+.brochure-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	width: 90vw;
+}
+
 .map {
 	width: 100%;
 	height: 300px;
@@ -117,4 +132,29 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 5px;
+}
+
+.brochure-download {
+	height: 60px;
+	border-radius: 60px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+
+	width: 80vw;
+
+	margin-bottom: 50px;
+
+	background: linear-gradient(101deg, #022473, #042677, #3467E0);
+
+	color: white;
+
+	font-family: helvetica;
+	font-size: 16pt;
+	
+}
+
+.brochure-download:hover {
+	cursor: pointer;
+	background: black;
 }

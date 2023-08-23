@@ -1,23 +1,250 @@
 [
 	{
-		"id": 1,
-		"name": "Cozy Cottage",
+		"id": 4,
+		"name": "Luxury Penthouse",
 		"address": {
-			"street": "123 Oak Street",
-			"town": "Smallville",
-			"latitude": 40.7128,
-			"longitude": -74.006
+			"street": "101 Highrise Avenue",
+			"town": "City Heights",
+			"latitude": 41.8781,
+			"longitude": -87.6298
 		},
-		"description": "A charming cottage in a peaceful neighborhood. Perfect for a small family or couple. Close to schools and parks. Pets allowed.",
-		"price": 1500,
+		"description": "An elegant penthouse with stunning views of the city skyline. Close to shops and restaurants. Smoking and pets allowed. ",
+		"price": 1200000,
+		"type": [
+			{
+				"id": 5,
+				"name": "Luxury"
+			},
+			{
+				"id": 3,
+				"name": "Modern"
+			}
+		],
+		"bedrooms": 3,
+		"bathrooms": 3,
+		"forSale": true,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "165e9eda34110dbfc56303186093a8d8.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "a-gen-stockholm-living-room-industry-fantastic-frank-popular-copy-1561410782.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Coastal-house-interior-design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image20.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image23.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image6.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images3.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images39.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images7.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Kensington-Interior-Design-Architecture-1-670x420.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "luxury-home-design-on-budget.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "luxury-house-interior-hallway-office-room-fireplace-shiny-hardwood-floor-42252141.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "modern-house-design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "new-house-interior-design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "two-seater-couches-and-wall-mounts-design-hack.jpg"
+			},
+			{
+				"typeId": 5,
+				"name": "1600w-68TB2bkACeA.webp"
+			}
+		],
+		"mainPhoto": "houses-with-black-windows.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Spacious Family Home",
+		"address": {
+			"street": "789 Maple Lane",
+			"town": "Suburbia",
+			"latitude": 37.7749,
+			"longitude": -122.4194
+		},
+		"description": "A large and comfortable family home with plenty of space. Close to schools and parks. Pets allowed.",
+		"price": 450000,
 		"type": [
 			{
 				"id": 1,
 				"name": "Detached"
 			},
 			{
-				"id": 2,
-				"name": "Cozy"
+				"id": 4,
+				"name": "Family"
+			}
+		],
+		"bedrooms": 4,
+		"bathrooms": 2,
+		"forSale": true,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "10c907907c0234db96f8b00bde2bbc31.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "a938314e688f56ee245c458e0d5c24c1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "beige-sofa.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Contemporary-interior-design-and-decor-Urbanology-Designs.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Decor_interiors_and_more_kitchen_design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image10.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image8.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images21.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images35.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images36.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images44.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images6.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images8.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "IMG_3486-806x1024.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "interior-design-ideas-of-2022-banner-2.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "interior-layout.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Living_Room_Design_Concept.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "lush-modern-classic-residence-in-dubai.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Soldati-House-Interior-01.jpg"
+			},
+			{
+				"typeId": 2,
+				"name": "images.png"
+			},
+			{
+				"typeId": 5,
+				"name": "1600w-JQz9TBabw04.webp"
+			}
+		],
+		"mainPhoto": "BWK-1-Tiburon-B-MC-4.jpg"
+	},
+	{
+		"id": 10,
+		"name": "Renovator's Dream",
+		"address": {
+			"street": "1122 Elm Street",
+			"town": "Metropolis",
+			"latitude": 34.0522,
+			"longitude": -118.2437
+		},
+		"description": "A fixer-upper project with great potential.",
+		"price": 1500,
+		"forSale": false,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Rustic Cabin",
+		"address": {
+			"street": "234 Pine Road",
+			"town": "Mountainville",
+			"latitude": 39.7392,
+			"longitude": -104.9903
+		},
+		"description": "A charming rustic cabin nestled in the mountains. This cozy home is perfect for a small family or couple. No smoking. No pets. If you enjoy the outdoors, this is the home for you!",
+		"price": 2500,
+		"type": [
+			{
+				"id": 6,
+				"name": "Rustic"
+			},
+			{
+				"id": 7,
+				"name": "Cabin"
 			}
 		],
 		"bedrooms": 2,
@@ -26,62 +253,94 @@
 		"media": [
 			{
 				"typeId": 3,
-				"name": "0f61764ad8dadd0d97cd5a771a768721.jpg"
+				"name": "41236db238c04fa678876f0eabd458ce.jpg"
 			},
 			{
 				"typeId": 1,
-				"name": "012.jpg"
+				"name": "03_JHID_NWHillsHouse.jpg"
 			},
 			{
 				"typeId": 1,
-				"name": "1634905146_85.jpeg"
+				"name": "Ana-Resim-3.jpg"
 			},
 			{
 				"typeId": 1,
-				"name": "ab.jpg"
+				"name": "Black-house-interior-with-matt-black-colour_Archid.png"
 			},
 			{
 				"typeId": 1,
-				"name": "brighton-house-figr-architecture-and-design_1.jpg"
+				"name": "farnsworth-house-edith-farnsworth-country-house-installation_dezeen_2364_col_4.jpg"
 			},
 			{
 				"typeId": 1,
-				"name": "images10.jpg"
+				"name": "Hikari-Box-Tiny-House-Interior-from-Loft-c6a708.jpg"
 			},
 			{
 				"typeId": 1,
-				"name": "images23.jpg"
+				"name": "image1.jpeg"
 			},
 			{
 				"typeId": 1,
-				"name": "images28.jpg"
+				"name": "image11.jpeg"
 			},
 			{
 				"typeId": 1,
-				"name": "images40.jpg"
+				"name": "image16.jpeg"
 			},
 			{
 				"typeId": 1,
-				"name": "images43.jpg"
+				"name": "image2.jpeg"
 			},
 			{
 				"typeId": 1,
-				"name": "images9.jpg"
+				"name": "image3.jpeg"
 			},
 			{
 				"typeId": 1,
-				"name": "lobby_view1.jpg"
+				"name": "image31.jpeg"
 			},
 			{
 				"typeId": 1,
-				"name": "Modern-kitchen-interior-design-2.jpg"
+				"name": "images.jpg"
 			},
 			{
 				"typeId": 1,
-				"name": "small-living-room-ideas-fatma-el-aminub9a8769-1673370515.jpg"
+				"name": "images29.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images32.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images47.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "modern-living-interior-design-1920x1139.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "pexels-photo-1571460.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "Tiny-house-with-amazing-interior-design_3.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "Title-Image-13_8046756588744.jpg"
+			},
+			{
+				"typeId": 2,
+				"name": "images (3).png"
+			},
+			{
+				"typeId": 5,
+				"name": "uncategorized-18976.webp"
 			}
 		],
-		"mainPhoto": "07vh3NDeGh5Lx_141.webp"
+		"mainPhoto": "im-697060.avif"
 	},
 	{
 		"id": 2,
@@ -188,482 +447,10 @@
 			{
 				"typeId": 1,
 				"name": "tiny-house-style-modern.jpg"
-			}
-		]
-	},
-	{
-		"id": 3,
-		"name": "Spacious Family Home",
-		"address": {
-			"street": "789 Maple Lane",
-			"town": "Suburbia",
-			"latitude": 37.7749,
-			"longitude": -122.4194
-		},
-		"description": "A large and comfortable family home with plenty of space. Close to schools and parks. Pets allowed.",
-		"price": 450000,
-		"type": [
-			{
-				"id": 1,
-				"name": "Detached"
-			},
-			{
-				"id": 4,
-				"name": "Family"
-			}
-		],
-		"bedrooms": 4,
-		"bathrooms": 2,
-		"forSale": true,
-		"media": [
-			{
-				"typeId": 3,
-				"name": "10c907907c0234db96f8b00bde2bbc31.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "a938314e688f56ee245c458e0d5c24c1.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "beige-sofa.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Contemporary-interior-design-and-decor-Urbanology-Designs.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Decor_interiors_and_more_kitchen_design.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "image10.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image8.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "images21.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images35.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images36.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images44.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images6.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images8.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "IMG_3486-806x1024.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "interior-design-ideas-of-2022-banner-2.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "interior-layout.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Living_Room_Design_Concept.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "lush-modern-classic-residence-in-dubai.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Soldati-House-Interior-01.jpg"
-			}
-		],
-		"mainPhoto": "BWK-1-Tiburon-B-MC-4.jpg"
-	},
-	{
-		"id": 4,
-		"name": "Luxury Penthouse",
-		"address": {
-			"street": "101 Highrise Avenue",
-			"town": "City Heights",
-			"latitude": 41.8781,
-			"longitude": -87.6298
-		},
-		"description": "An elegant penthouse with stunning views of the city skyline. Close to shops and restaurants. Smoking and pets allowed. ",
-		"price": 1200000,
-		"type": [
-			{
-				"id": 5,
-				"name": "Luxury"
-			},
-			{
-				"id": 3,
-				"name": "Modern"
-			}
-		],
-		"bedrooms": 3,
-		"bathrooms": 3,
-		"forSale": true,
-		"media": [
-			{
-				"typeId": 3,
-				"name": "165e9eda34110dbfc56303186093a8d8.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "a-gen-stockholm-living-room-industry-fantastic-frank-popular-copy-1561410782.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Coastal-house-interior-design.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "image.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image20.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image23.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image6.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "images3.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images39.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images7.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Kensington-Interior-Design-Architecture-1-670x420.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "luxury-home-design-on-budget.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "luxury-house-interior-hallway-office-room-fireplace-shiny-hardwood-floor-42252141.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "modern-house-design.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "new-house-interior-design.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "two-seater-couches-and-wall-mounts-design-hack.jpg"
-			}
-		],
-		"mainPhoto": "houses-with-black-windows.jpg"
-	},
-	{
-		"id": 5,
-		"name": "Rustic Cabin",
-		"address": {
-			"street": "234 Pine Road",
-			"town": "Mountainville",
-			"latitude": 39.7392,
-			"longitude": -104.9903
-		},
-		"description": "A charming rustic cabin nestled in the mountains. This cozy home is perfect for a small family or couple. No smoking. No pets. If you enjoy the outdoors, this is the home for you!",
-		"price": 2500,
-		"type": [
-			{
-				"id": 6,
-				"name": "Rustic"
-			},
-			{
-				"id": 7,
-				"name": "Cabin"
-			}
-		],
-		"bedrooms": 2,
-		"bathrooms": 1,
-		"forSale": false,
-		"media": [
-			{
-				"typeId": 3,
-				"name": "41236db238c04fa678876f0eabd458ce.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "03_JHID_NWHillsHouse.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Ana-Resim-3.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Black-house-interior-with-matt-black-colour_Archid.png"
-			},
-			{
-				"typeId": 1,
-				"name": "farnsworth-house-edith-farnsworth-country-house-installation_dezeen_2364_col_4.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Hikari-Box-Tiny-House-Interior-from-Loft-c6a708.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "image1.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image11.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image16.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image2.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image3.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image31.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "images.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images29.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images32.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images47.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "modern-living-interior-design-1920x1139.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "pexels-photo-1571460.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "Tiny-house-with-amazing-interior-design_3.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "Title-Image-13_8046756588744.jpg"
-			}
-		],
-		"mainPhoto": "im-697060.avif"
-	},
-	{
-		"id": 6,
-		"name": "Quaint Bungalow",
-		"address": {
-			"street": "567 Willow Lane",
-			"town": "Suburbia",
-			"latitude": 37.7749,
-			"longitude": -122.4194
-		},
-		"description": "A cozy bungalow with a lush backyard garden. Never before on the market. Close to schools and parks. Pets allowed. Only serious inquiries please. Enjoy your morning coffee on the front porch swing!",
-		"price": 280000,
-		"forSale": true,
-		"type": [
-			{
-				"id": 1,
-				"name": "Detached"
-			},
-			{
-				"id": 2,
-				"name": "Cozy"
-			}
-		],
-		"bedrooms": 2,
-		"bathrooms": 1,
-		"mainPhoto": "palazzo-royal-mansions-2-vxzjz.webp",
-		"media": [
-			{
-				"typeId": 1,
-				"name": "All-white-interior-design-ideas-Sonia-C.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "e-interior-design-within-house-beautiful-interior-designs-for-small-bedrooms.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "FEATURE.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "image19.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image30.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "images17.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images18.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images22.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images25.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images34.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images45.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images48.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "interior-design-of-a-small-house.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "modernist-decor-inspiration-01.jpg"
-			}
-		]
-	},
-	{
-		"id": 7,
-		"name": "Urban Loft",
-		"address": {
-			"street": "890 Loft Avenue",
-			"town": "Metropolis",
-			"latitude": 34.0522,
-			"longitude": -118.2437
-		},
-		"description": "An industrial-style loft in the heart of the city.",
-		"price": 600000,
-		"forSale": true,
-		"type": [
-			{
-				"id": 3,
-				"name": "Modern"
-			}
-		],
-		"bedrooms": 1,
-		"bathrooms": 1.5,
-		"mainPhoto": "white-brick-house-with-black-trim-23.jpg",
-		"media": [
-			{
-				"typeId": 1,
-				"name": "2.tinyhomes-1-1024x683.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "celia-barbados-villa-interior-photography-atinnakostukovky-dsc07574-hdr-64386279ca308.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "duplex-home-interior-design-in-india.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "e675fdaff9eff01341e1e4671b04bd4a.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "Essential-Interior-Style-Guide-Fresh-Coastal-homes-HERO-1500-x-770__Resampled.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "image4.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "image9.jpeg"
-			},
-			{
-				"typeId": 1,
-				"name": "images11.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images15.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images16.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images19.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images41.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "images5.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "interior-design-ideas-for-small-homes.jpg"
-			},
-			{
-				"typeId": 1,
-				"name": "modernist-decor-inspiration-07.jpg"
 			},
 			{
-				"typeId": 1,
-				"name": "oakleymoore-room1.jpg"
+				"typeId": 2,
+				"name": "images (1).png"
 			}
 		]
 	},
@@ -884,25 +671,278 @@
 			{
 				"typeId": 1,
 				"name": "Stunning-Interior-Design-for-House-Modern-Top-10-Tips-to-Design-Stylish-Homes.jpg"
+			},
+			{
+				"typeId": 2,
+				"name": "images (2).png"
 			}
 		]
 	},
 	{
-		"id": 10,
-		"name": "Renovator's Dream",
+		"id": 7,
+		"name": "Urban Loft",
 		"address": {
-			"street": "1122 Elm Street",
+			"street": "890 Loft Avenue",
 			"town": "Metropolis",
 			"latitude": 34.0522,
 			"longitude": -118.2437
 		},
-		"description": "A fixer-upper project with great potential.",
+		"description": "An industrial-style loft in the heart of the city.",
+		"price": 600000,
+		"forSale": true,
+		"type": [
+			{
+				"id": 3,
+				"name": "Modern"
+			}
+		],
+		"bedrooms": 1,
+		"bathrooms": 1.5,
+		"mainPhoto": "white-brick-house-with-black-trim-23.jpg",
+		"media": [
+			{
+				"typeId": 1,
+				"name": "2.tinyhomes-1-1024x683.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "celia-barbados-villa-interior-photography-atinnakostukovky-dsc07574-hdr-64386279ca308.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "duplex-home-interior-design-in-india.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "e675fdaff9eff01341e1e4671b04bd4a.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Essential-Interior-Style-Guide-Fresh-Coastal-homes-HERO-1500-x-770__Resampled.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image4.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image9.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images11.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images15.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images16.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images19.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images41.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images5.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "interior-design-ideas-for-small-homes.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "modernist-decor-inspiration-07.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "oakleymoore-room1.jpg"
+			},
+			{
+				"typeId": 2,
+				"name": "images.jpg"
+			}
+		]
+	},
+	{
+		"id": 1,
+		"name": "Cozy Cottage",
+		"address": {
+			"street": "123 Oak Street",
+			"town": "Smallville",
+			"latitude": 40.7128,
+			"longitude": -74.006
+		},
+		"description": "A charming cottage in a peaceful neighborhood. Perfect for a small family or couple. Close to schools and parks. Pets allowed.",
 		"price": 1500,
-		"forSale": false,
 		"type": [
 			{
 				"id": 1,
 				"name": "Detached"
+			},
+			{
+				"id": 2,
+				"name": "Cozy"
+			}
+		],
+		"bedrooms": 2,
+		"bathrooms": 1,
+		"forSale": false,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "0f61764ad8dadd0d97cd5a771a768721.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "012.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "1634905146_85.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "ab.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "brighton-house-figr-architecture-and-design_1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images10.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images23.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images28.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images40.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images43.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images9.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "lobby_view1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Modern-kitchen-interior-design-2.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "small-living-room-ideas-fatma-el-aminub9a8769-1673370515.jpg"
+			},
+			{
+				"typeId": 2,
+				"name": "images (4).png"
+			}
+		],
+		"mainPhoto": "07vh3NDeGh5Lx_141.webp"
+	},
+	{
+		"id": 6,
+		"name": "Quaint Bungalow",
+		"address": {
+			"street": "567 Willow Lane",
+			"town": "Suburbia",
+			"latitude": 37.7749,
+			"longitude": -122.4194
+		},
+		"description": "A cozy bungalow with a lush backyard garden. Never before on the market. Close to schools and parks. Pets allowed. Only serious inquiries please. Enjoy your morning coffee on the front porch swing!",
+		"price": 280000,
+		"forSale": true,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 2,
+				"name": "Cozy"
+			}
+		],
+		"bedrooms": 2,
+		"bathrooms": 1,
+		"mainPhoto": "palazzo-royal-mansions-2-vxzjz.webp",
+		"media": [
+			{
+				"typeId": 1,
+				"name": "All-white-interior-design-ideas-Sonia-C.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "e-interior-design-within-house-beautiful-interior-designs-for-small-bedrooms.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "FEATURE.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image19.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image30.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images17.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images18.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images22.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images25.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images34.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images45.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images48.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "interior-design-of-a-small-house.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "modernist-decor-inspiration-01.jpg"
+			},
+			{
+				"typeId": 2,
+				"name": "images (5).png"
 			}
 		]
 	}
