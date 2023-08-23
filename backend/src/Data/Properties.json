@@ -255,6 +255,12 @@
 		},
 		"description": "A fixer-upper project with great potential.",
 		"price": 1500,
-		"forSale": false
+		"forSale": false,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			}
+		]
 	}
 ]

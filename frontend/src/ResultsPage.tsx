@@ -42,13 +42,14 @@ const ResultsPage = () => {
 			})
 	}
 
-	useEffect(() => {
-		setLoading(false);
-	}, [results])
-
+	
 	useEffect(() => {
 		fetchResults();
 	}, [])
+	
+	useEffect(() => {
+		setLoading(false);
+	}, [results])
 
 	function getResultInfo(title: string, bedrooms: number, bathrooms: number, description: string) {
 
@@ -139,11 +140,12 @@ const ResultsPage = () => {
 		return (
 			<div className="results-container">
 				<div className="results-header" onClick={() => navigate('/')}>
-					<span style={{
+					{/* <span style={{
 						fontSize: '30px',
 						marginRight: '20px',
 						fontFamily: 'andale mono,monospace',
-					}} > {'<'} </span>
+					}} > {'<'} </span> */}
+					<i className="fa fa-chevron-left" style={{marginRight: '20px', color: '#022473'}}/>
 					<img className="logo" src={searchLogo} alt="Olympus Logo" />
 				</div>
 
