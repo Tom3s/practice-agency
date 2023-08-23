@@ -19,17 +19,18 @@ const SearchPage = () => {
 
 	const [locations, setLocations] = useState<string[]>([]);
 	const [prices, setPrices] = useState<string[]>(salePrices);
+	const [priceLabel, setPriceLabel] = useState<string>('Max Price');
 	const bedrooms = ['1', '2', '3', '4', '5', '6'];
 	const [propertyTypes, setPropertyTypes] = useState<any[]>([]);
 
-	const [currentTransactionType, setCurrentTransactionType] = useState<string | null>('sales');
-	const [currentLocation, setCurrentLocation] = useState<string | null>('');
-	const [currentPrice, setCurrentPrice] = useState<string | null>(null);
-	const [currentBedroom, setCurrentBedroom] = useState<string | null>(null);
+	const [currentTransactionType, setCurrentTransactionType] = useState<string>('sales');
+	const [currentLocation, setCurrentLocation] = useState<string>('');
+	const [currentPrice, setCurrentPrice] = useState<string>('');
+	const [currentBedroom, setCurrentBedroom] = useState<string>('');
 	const [currentPropertyType, setCurrentPropertyType] = useState<string[]>([]);
 
-	useEffect(() => {
 
+	function fetchPropertyTypes() {
 		const url = currentTransactionType === 'sales' ? ApiGenerator.saleTypeUrl : ApiGenerator.lettingTypeUrl;
 
 		setCurrentPropertyType([]);
@@ -39,10 +40,9 @@ const SearchPage = () => {
 			.then(data => {
 				setPropertyTypes(data);
 			})
-	}, [currentTransactionType])
-	
-	useEffect(() => {
+	}
 
+	function fetchLocations() {
 		const url = currentTransactionType === 'sales' ? ApiGenerator.saleLoctationUrl : ApiGenerator.lettingLoctationUrl;
 
 		setCurrentLocation('');
@@ -52,9 +52,20 @@ const SearchPage = () => {
 			.then(data => {
 				setLocations(data);
 			})
+	}
+
+	useEffect(() => {
+		fetchPropertyTypes();
+		fetchLocations();
+
+		setCurrentPrice('');
+
+		setPriceLabel(currentTransactionType === 'sales' ? 'Max Price' : 'Max Price (Per Month)');
+		setPrices(currentTransactionType === 'sales' ? salePrices : lettingPrices);
+
 	}, [currentTransactionType])
 
-	function handleTransactionTypeChange(event: React.MouseEvent<HTMLElement>, newTransactionType: string | null) {
+	function handleTransactionTypeChange(event: React.MouseEvent<HTMLElement>, newTransactionType: string) {
 		setCurrentTransactionType(newTransactionType);
 	}
 
@@ -74,7 +85,7 @@ const SearchPage = () => {
 			<FormControl>
 				<InputLabel id="location-label">Location</InputLabel>
 				<Select
-					sx={{ borderRadius: '50px', width: '80vw' }}
+					sx={{ borderRadius: '50px', width: '80vw', marginBottom: '20px' }}
 					labelId="location-label"
 					id="location"
 					value={currentLocation}
@@ -96,7 +107,7 @@ const SearchPage = () => {
 			<FormControl>
 				<InputLabel id="type-label">Property Type</InputLabel>
 				<Select
-					sx={{ borderRadius: '50px', width: '80vw' }}
+					sx={{ borderRadius: '50px', width: '80vw', marginBottom: '20px' }}
 					labelId="type-label"
 					id="type"
 					multiple
@@ -118,16 +129,39 @@ const SearchPage = () => {
 		)
 	}
 
+	function getPriceSelect() {
+		return (
+			<FormControl>
+				<InputLabel id="price-label">{priceLabel}</InputLabel>
+				<Select
+					sx={{ borderRadius: '50px', width: '80vw' }}
+					labelId="price-label"
+					id="price"
+					value={currentPrice}
+					onChange={(event) => setCurrentPrice(event.target.value as string)}
+					inputProps={{ 'aria-label': 'Without label' }}
+				>
+					{prices.map((price, index) => (
+						<MenuItem key={index} value={price}>
+							{price}
+						</MenuItem>
+					))}
+				</Select>
+			</FormControl>
+			)
+	}
+
 	return (
 		<Fragment>
 			<div className="search-container">
 				<img className="logo" src={searchLogo} alt="Olympus Logo" />
 				<ToggleButtonGroup sx={{ borderRadius: '50px' }} color="primary" value={currentTransactionType} onChange={handleTransactionTypeChange} exclusive>
-					<ToggleButton sx={{ borderRadius: '50px' }} value="sales">Sales</ToggleButton>
-					<ToggleButton sx={{ borderRadius: '50px' }} value="lettings">Lettings</ToggleButton>
+					<ToggleButton sx={{ borderRadius: '50px', width: '40vw', height: '15px', marginBottom: '20px' }} value="sales">Sales</ToggleButton>
+					<ToggleButton sx={{ borderRadius: '50px', width: '40vw', height: '15px', marginBottom: '20px' }} value="lettings">Lettings</ToggleButton>
 				</ToggleButtonGroup>
 				{getTypeSelect()}
 				{getLocationSelect()}
+				{getPriceSelect()}
 			</div>
 		</Fragment>
 	)
