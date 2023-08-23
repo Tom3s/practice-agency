@@ -53,10 +53,17 @@ const ResultsPage = () => {
 
 	function getResultInfo(title: string, bedrooms: number, bathrooms: number, description: string) {
 
-		const maxDescriptionLength = 100;
-		const lastDescriptionSpaceIndex = description.lastIndexOf(' ', maxDescriptionLength);
+		const maxDescriptionLength = 70;
 
-		const cutDescription = description.substring(0, lastDescriptionSpaceIndex) + '...';
+		var cutDescription = '';
+		if (description.length <= maxDescriptionLength) {
+			cutDescription = description;
+		}
+		else {
+			const lastDescriptionSpaceIndex = description.lastIndexOf(' ', maxDescriptionLength);
+			
+			cutDescription = description.substring(0, lastDescriptionSpaceIndex) + '...';
+		}
 
 		return (
 			<Fragment>
@@ -114,7 +121,7 @@ const ResultsPage = () => {
 		const resultTitle = getResultTitle(result.bedrooms, result.type?.at(0), result.address);
 
 		return (
-			<div className="result" key={index}>
+			<div className="result" key={index} onClick={() => navigate('/property?id=' + result.id)}>
 				{/* <div className="result-image-container"> */}
 				<img className="result-image" src={mainPhotoUrl} alt="Property" />
 				{/* </div> */}

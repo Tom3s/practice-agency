@@ -8,7 +8,7 @@
 			"latitude": 40.7128,
 			"longitude": -74.006
 		},
-		"description": "A charming cottage in a peaceful neighborhood.",
+		"description": "A charming cottage in a peaceful neighborhood. Perfect for a small family or couple. Close to schools and parks. Pets allowed.",
 		"price": 1500,
 		"type": [
 			{
@@ -40,7 +40,7 @@
 			"latitude": 34.0522,
 			"longitude": -118.2437
 		},
-		"description": "A sleek and modern condo in the heart of the city.",
+		"description": "A sleek and modern condo in the heart of the city. Close to shops and restaurants. Pets allowed. No smoking. No children.",
 		"price": 3000,
 		"type": [
 			{
@@ -66,7 +66,7 @@
 			"latitude": 37.7749,
 			"longitude": -122.4194
 		},
-		"description": "A large and comfortable family home with plenty of space.",
+		"description": "A large and comfortable family home with plenty of space. Close to schools and parks. Pets allowed.",
 		"price": 450000,
 		"type": [
 			{
@@ -98,7 +98,7 @@
 			"latitude": 41.8781,
 			"longitude": -87.6298
 		},
-		"description": "An elegant penthouse with stunning views of the city skyline.",
+		"description": "An elegant penthouse with stunning views of the city skyline. Close to shops and restaurants. Smoking and pets allowed. ",
 		"price": 1200000,
 		"type": [
 			{
@@ -130,7 +130,7 @@
 			"latitude": 39.7392,
 			"longitude": -104.9903
 		},
-		"description": "A charming rustic cabin nestled in the mountains.",
+		"description": "A charming rustic cabin nestled in the mountains. This cozy home is perfect for a small family or couple. No smoking. No pets. If you enjoy the outdoors, this is the home for you!",
 		"price": 2500,
 		"type": [
 			{
@@ -162,7 +162,7 @@
 			"latitude": 37.7749,
 			"longitude": -122.4194
 		},
-		"description": "A cozy bungalow with a lush backyard garden.",
+		"description": "A cozy bungalow with a lush backyard garden. Never before on the market. Close to schools and parks. Pets allowed. Only serious inquiries please. Enjoy your morning coffee on the front porch swing!",
 		"price": 280000,
 		"forSale": true,
 		"type": [
@@ -210,7 +210,7 @@
 			"latitude": 39.7392,
 			"longitude": -104.9903
 		},
-		"description": "A peaceful retreat in the mountains with breathtaking views.",
+		"description": "A peaceful retreat in the mountains with breathtaking views. Finely crafted woodwork throughout. Close to hiking trails and ski slopes. No smoking. No pets. Over the river and through the woods...",
 		"price": 220000,
 		"forSale": true,
 		"media": [
@@ -239,7 +239,7 @@
 			"latitude": 41.8781,
 			"longitude": -87.6298
 		},
-		"description": "A modern townhouse in a quiet suburban neighborhood.",
+		"description": "A modern townhouse in a quiet suburban neighborhood. Notable features include a spacious kitchen and a large backyard. Renovation completed in 2019. Close to schools and parks. Pets allowed.",
 		"price": 320000,
 		"forSale": true,
 		"type": [
