@@ -42,11 +42,11 @@ const ResultsPage = () => {
 			})
 	}
 
-	
+
 	useEffect(() => {
 		fetchResults();
 	}, [])
-	
+
 	useEffect(() => {
 		setLoading(false);
 	}, [results])
@@ -61,7 +61,7 @@ const ResultsPage = () => {
 		}
 		else {
 			const lastDescriptionSpaceIndex = description.lastIndexOf(' ', maxDescriptionLength);
-			
+
 			cutDescription = description.substring(0, lastDescriptionSpaceIndex) + '...';
 		}
 
@@ -71,7 +71,24 @@ const ResultsPage = () => {
 					{title}
 				</div>
 				<div className="result-bath-bed">
-					<i className="fa fa-bed" /> {bedrooms}, <i className="fa fa-bath" /> {bathrooms}
+					{
+						bedrooms > 0 ?
+							(
+								<Fragment>
+									<i className="fa fa-bed" /> {bedrooms},
+								</Fragment>
+							)
+							: ''
+					}
+					{
+						bathrooms > 0 ?
+							(
+								<Fragment>
+									<i className="fa fa-bath" /> {bathrooms}
+								</Fragment>
+							)
+							: ''
+					}
 				</div>
 				<div className="result-description">
 					{cutDescription}
@@ -80,7 +97,7 @@ const ResultsPage = () => {
 		)
 	}
 
-	function getResultTitle(bedrooms: number | undefined, type: any | undefined, address: any | undefined){
+	function getResultTitle(bedrooms: number | undefined, type: any | undefined, address: any | undefined) {
 		var title = '';
 
 		if (bedrooms && bedrooms > 0) {
@@ -121,7 +138,7 @@ const ResultsPage = () => {
 		const resultTitle = getResultTitle(result.bedrooms, result.type?.at(0), result.address);
 
 		return (
-			<div className="result" key={index} onClick={() => navigate('/property?id=' + result.id)	}>
+			<div className="result" key={index} onClick={() => navigate('/property?id=' + result.id)}>
 				{/* <div className="result-image-container"> */}
 				<img className="result-image" src={mainPhotoUrl} alt="Property" />
 				{/* </div> */}
@@ -152,7 +169,7 @@ const ResultsPage = () => {
 						marginRight: '20px',
 						fontFamily: 'andale mono,monospace',
 					}} > {'<'} </span> */}
-					<i className="fa fa-chevron-left" style={{marginRight: '20px', color: '#022473'}}/>
+					<i className="fa fa-chevron-left" style={{ marginRight: '20px', color: '#022473' }} />
 					<img className="logo" src={searchLogo} alt="Olympus Logo" />
 				</div>
 

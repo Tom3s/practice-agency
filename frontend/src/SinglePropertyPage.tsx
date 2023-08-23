@@ -50,7 +50,7 @@ const SinglePropertyPage = () => {
 	}, [property])
 
 
-	function getResultTitle(transactionType: boolean, bedrooms: number | undefined, type: any | undefined, address: any | undefined){
+	function getResultTitle(transactionType: boolean, bedrooms: number | undefined, type: any | undefined, address: any | undefined) {
 		var title = '';
 
 		if (bedrooms && bedrooms > 0) {
@@ -112,7 +112,7 @@ const SinglePropertyPage = () => {
 	}
 
 	function checkIfHasFloorplan() {
-		return property.media.find((media: any) => media.typeId === 2 );
+		return property.media.find((media: any) => media.typeId === 2);
 	}
 
 	function checkIfHasBrochure() {
@@ -126,7 +126,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasImages() ?
 						<div className="feature">
-							<i className="fa fa-images" /> Images
+							<i className="fa fa-image" /> Images
 						</div>
 						:
 						<Fragment />
@@ -142,7 +142,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasEPC() ?
 						<div className="feature">
-							<i className="fa fa-chart-bar" /> EPC
+							<i className="fa fa-bar-chart" /> EPC
 						</div>
 						:
 						<Fragment />
@@ -150,7 +150,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasFloorplan() ?
 						<div className="feature">
-							<i className="fa fa-file-alt" /> Floorplan
+							<i className="material-icons">border_all</i> Floorplan
 						</div>
 						:
 						<Fragment />
@@ -158,7 +158,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasBrochure() ?
 						<div className="feature">
-							<i className="fa fa-file-pdf" /> Brochure
+							<i className="fa fa-file-pdf-o" /> Brochure
 						</div>
 						:
 						<Fragment />
@@ -167,35 +167,69 @@ const SinglePropertyPage = () => {
 		)
 	}
 
+	function getInfo() {
+		const bedrooms = property.bedrooms || 0;
+		const bathrooms = property.bathrooms || 0;
+		return (
+			<div className="info-container">
+				<div className="price">
+					{property.price}$
+				</div>
+				<div className="bed-bath">
+					{
+						bedrooms > 0 ?
+							(
+								<Fragment>
+									<i className="fa fa-bed" /> {bedrooms} 
+								</Fragment>
+							)
+							: ''
+					}
+					<span> </span>
+					{
+						bathrooms > 0 ?
+							(
+								<Fragment>
+									<i className="fa fa-bath" /> {bathrooms}
+								</Fragment>
+							)
+							: ''
+					}
+				</div>
+			</div>
+		)
+	}
+
 	function mainContent() {
 		return (
 			<div className="results-container">
-					<div className="results-header" onClick={() => navigate(-1)}>
-						{/* <span style={{
+				<div className="results-header" onClick={() => navigate(-1)}>
+					{/* <span style={{
 						fontSize: '30px',
 						marginRight: '20px',
 						fontFamily: 'andale mono,monospace',
 					}} > {'<'} </span> */}
-						<i className="fa fa-chevron-left" style={{ marginRight: '20px', color: '#022473' }} />
-						<img className="logo" src={searchLogo} alt="Olympus Logo" />
-					</div>
-
-					{/* mainImage with title on top */}
-					{getMainImage()}
-					{/* Feature scroller */}
-					{getFeatures()}
-					{/* Price ------ bed / bath */}
-					{/* Description */}
-					{/* Property Images */}
-					{/* Map */}
-					{/* EPC */}
-					{/* Floorplan */}
-					{/* Brochure */}
-
+					<i className="fa fa-chevron-left" style={{ marginRight: '20px', color: '#022473' }} />
+					<img className="logo" src={searchLogo} alt="Olympus Logo" />
 				</div>
+
+				{/* mainImage with title on top */}
+				{getMainImage()}
+				{/* Feature scroller */}
+				{getFeatures()}
+				{/* Price ------ bed / bath */}
+				{getInfo()}
+				{/* Description */}
+				{/* Property Images */}
+				{/* Map */}
+				{/* EPC */}
+				{/* Floorplan */}
+				{/* Brochure */}
+
+			</div>
 		);
 	};
-		
+
 
 	return (
 		<Fragment>

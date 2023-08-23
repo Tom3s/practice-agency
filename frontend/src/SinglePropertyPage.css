@@ -20,3 +20,45 @@
 
 	width: 80vw;
 }
+
+.features-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: baseline;
+	align-items: center;
+
+	background: linear-gradient(99deg, #022473, #042677, #3467E0);
+
+
+	width: 100vw;
+}
+
+.feature {
+	color: white;
+	font-family: Helvetica;
+	font-size: 16pt;
+	/* pad 15px up-down, 20px left-right */
+	padding: 15px 20px;
+
+}
+
+.info-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	margin: 20px;
+
+	width: 90vw;
+}
+
+.price {
+	font-family: Cambria;
+	font-size: 16pt;
+	color: #022473;
+}
+
+.bed-bath {
+	font-family: Helvetica;
+	font-size: 16pt;
+}
