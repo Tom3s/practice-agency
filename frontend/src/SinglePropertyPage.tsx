@@ -100,6 +100,9 @@ const SinglePropertyPage = () => {
 	}
 
 	function checkIfHasImages() {
+		if (property.media === undefined) {
+			return false;
+		}
 		return property.media.find((media: any) => media.typeId === 1);
 	}
 
@@ -108,14 +111,23 @@ const SinglePropertyPage = () => {
 	}
 
 	function checkIfHasEPC() {
+		if (property.media === undefined) {
+			return false;
+		}
 		return property.media.find((media: any) => media.typeId === 3);
 	}
 
 	function checkIfHasFloorplan() {
+		if (property.media === undefined) {
+			return false;
+		}
 		return property.media.find((media: any) => media.typeId === 2);
 	}
 
 	function checkIfHasBrochure() {
+		if (property.media === undefined) {
+			return false;
+		}
 		return property.media.find((media: any) => media.typeId === 5);
 	}
 
@@ -180,7 +192,7 @@ const SinglePropertyPage = () => {
 						bedrooms > 0 ?
 							(
 								<Fragment>
-									<i className="fa fa-bed" /> {bedrooms} 
+									<i className="fa fa-bed" /> {bedrooms}
 								</Fragment>
 							)
 							: ''
@@ -210,6 +222,10 @@ const SinglePropertyPage = () => {
 
 	function getPropertyImages() {
 
+		if (!checkIfHasImages()) {
+			return <Fragment />
+		}
+
 		const images = property.media.filter((media: any) => media.typeId === 1);
 
 		if (images.length === 0) {
@@ -225,18 +241,18 @@ const SinglePropertyPage = () => {
 		const largeImages = imageUrls.slice(0, 2);
 		const smallImages = imageUrls.slice(2);
 
-	
+
 		return (
 			<div className="property-images-container">
 				<div className="section-title">
 					Property Images
 				</div>
 				<div className="property-images-large">
-				{
-					largeImages.map((image, index) => (
-						<img className="property-image" src={image} alt="Property" key={index} />
-					))
-				}
+					{
+						largeImages.map((image, index) => (
+							<img className="property-image" src={image} alt="Property" key={index} />
+						))
+					}
 				</div>
 				<div className="property-images-grid">
 					{
@@ -245,10 +261,78 @@ const SinglePropertyPage = () => {
 						))
 					}
 				</div>
-				
+
 			</div>
 		)
 	}
+
+	function getMap() {
+		// AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8
+		if (!checkIfHasMapLocation()) {
+			return <Fragment />
+		}
+
+		const mapUrl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=" +
+			property.address.latitude.toString() + "," + property.address.longitude.toString();
+
+		return (
+			<div className="map-container">
+				<div className="section-title">
+					Map
+				</div>
+
+				<iframe
+					className="map"
+					loading="lazy"
+					allowFullScreen
+					// referrerpolicy="no-referrer-when-downgrade"
+					src={mapUrl}>
+				</iframe>
+			</div>
+		)
+	}
+
+	function getEPC() {
+		if (!checkIfHasEPC()) {
+			return <Fragment />
+		}
+
+		const image = buildMediaUrl(property.fileUrl, 3, property.media.find((media: any) => media.typeId === 3).name);
+
+		return (
+			<div className="property-images-container">
+				<div className="section-title">
+					EPC
+				</div>
+				<div className="property-images-large">
+
+					<img className="property-image" src={image} alt="EPC" />
+				</div>
+			</div>
+		)
+
+	}
+
+	function getFloorplan() {
+		if (!checkIfHasFloorplan()) {
+			return <Fragment />
+		}
+
+		const image = buildMediaUrl(property.fileUrl, 2, property.media.find((media: any) => media.typeId === 2).name);
+
+		return (
+			<div className="property-images-container">
+				<div className="section-title">
+					Floorplan
+				</div>
+				<div className="property-images-large">
+					<img className="property-image" src={image} alt="Floorplan" />
+				</div>
+			</div>
+		)
+
+	}
+
 
 
 	function mainContent() {
@@ -272,14 +356,17 @@ const SinglePropertyPage = () => {
 				{getInfo()}
 				<div className="extra-info-container">
 
-				{/* Description */}
-				{getDescription()}
-				{/* Property Images */}
-				{getPropertyImages()}
-				{/* Map */}
-				{/* EPC */}
-				{/* Floorplan */}
-				{/* Brochure */}
+					{/* Description */}
+					{getDescription()}
+					{/* Property Images */}
+					{getPropertyImages()}
+					{/* Map */}
+					{getMap()}
+					{/* EPC */}
+					{getEPC()}
+					{/* Floorplan */}
+					{getFloorplan()}
+					{/* Brochure */}
 				</div>
 
 			</div>

@@ -84,6 +84,20 @@
 	width: 90vw;
 }
 
+.map-container {
+	/* display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center; */
+	
+	width: 90vw;
+}
+
+.map {
+	width: 100%;
+	height: 300px;
+}
+
 .property-image {
 	object-fit: cover;
 	width: 100%;
