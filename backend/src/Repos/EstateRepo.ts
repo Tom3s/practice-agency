@@ -271,6 +271,27 @@ class PropertyRepo {
 		)
 	}
 	
+	getProperty(id: number): Result<Property> {
+		const property: Property | undefined = this.list.find((property: Property) => {
+			return property.id === id;
+		});
+		
+		if (property === undefined) {
+			return new Result(
+				false,
+				'Property not found',
+				404
+			)
+		}
+
+		return new Result(
+			true,
+			'Operation successful',
+			200,
+			property
+		)
+	}
+
 }
 
 export default PropertyRepo;

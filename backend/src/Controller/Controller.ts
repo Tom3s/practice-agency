@@ -99,6 +99,17 @@ class Controller {
 		)
 	}
 
+	getProperty(type: string, id: number): Result<Property> {
+		if (type !== 'sale' && type !== 'letting') {
+			return new Result(
+				false,
+				'Invalid property type',
+				400
+			)
+		}
+		return this.propertyRepo.getProperty(id);
+	}
+
 	validateApiKey(apiKey: string): Result<boolean> {
 
 		// TODO: Remove this line

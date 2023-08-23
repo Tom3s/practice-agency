@@ -6,7 +6,7 @@
 			"street": "123 Oak Street",
 			"town": "Smallville",
 			"latitude": 40.7128,
-			"longitude": -74.006
+			"longitude": -74.0060
 		},
 		"description": "A charming cottage in a peaceful neighborhood.",
 		"price": 1500,
@@ -28,8 +28,7 @@
 				"typeId": 3,
 				"name": "0f61764ad8dadd0d97cd5a771a768721.jpg"
 			}
-		],
-		"mainPhoto": "07vh3NDeGh5Lx_141.webp"
+		]
 	},
 	{
 		"id": 2,
@@ -54,8 +53,7 @@
 		],
 		"bedrooms": 1,
 		"bathrooms": 1,
-		"forSale": false,
-		"mainPhoto": "8bd82870-cb42-11e9-9a56-cf16cd66e478-how_big_is_a_mansion_anyway_what_to_know_about_these_large_houses-ogid-123839.jpg"
+		"forSale": false
 	},
 	{
 		"id": 3,
@@ -86,8 +84,7 @@
 				"typeId": 3,
 				"name": "10c907907c0234db96f8b00bde2bbc31.jpg"
 			}
-		],
-		"mainPhoto": "BWK-1-Tiburon-B-MC-4.jpg"
+		]
 	},
 	{
 		"id": 4,
@@ -118,8 +115,7 @@
 				"typeId": 3,
 				"name": "165e9eda34110dbfc56303186093a8d8.jpg"
 			}
-		],
-		"mainPhoto": "houses-with-black-windows.jpg"
+		]
 	},
 	{
 		"id": 5,
@@ -150,8 +146,7 @@
 				"typeId": 3,
 				"name": "41236db238c04fa678876f0eabd458ce.jpg"
 			}
-		],
-		"mainPhoto": "im-697060.avif"
+		]
 	},
 	{
 		"id": 6,
@@ -176,8 +171,7 @@
 			}
 		],
 		"bedrooms": 2,
-		"bathrooms": 1,
-		"mainPhoto": "palazzo-royal-mansions-2-vxzjz.webp"
+		"bathrooms": 1
 	},
 	{
 		"id": 7,
@@ -198,8 +192,7 @@
 			}
 		],
 		"bedrooms": 1,
-		"bathrooms": 1.5,
-		"mainPhoto": "white-brick-house-with-black-trim-23.jpg"
+		"bathrooms": 1.5
 	},
 	{
 		"id": 8,

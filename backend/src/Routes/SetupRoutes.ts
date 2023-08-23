@@ -126,6 +126,25 @@ function setupRoutes(app: Express, controller: Controller): void {
 		response.status(result.status).send(result.message);
 	});
 
+	app.get('/v2/property/:type/:id', async (request: Request, response: Response) => {
+		const apiKey: string = request.query['api-key'] as string;
+		if (controller.validateApiKey(apiKey).data === false) {
+			response.status(401).send('Invalid API key');
+			return;
+		}
+
+		const type: string = request.params['type'];
+		const id: number = parseInt(request.params['id']);
+
+		const result: Result<Property> = await controller.getProperty(type, id);
+
+		if (result.success) {
+			response.status(result.status).send(result.data);
+			return;
+		}
+		response.status(result.status).send(result.message);
+	});
+
 
 	
 }
