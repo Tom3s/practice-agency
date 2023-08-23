@@ -200,6 +200,57 @@ const SinglePropertyPage = () => {
 		)
 	}
 
+	function getDescription() {
+		return (
+			<div className="description-container">
+				{property.description}
+			</div>
+		)
+	}
+
+	function getPropertyImages() {
+
+		const images = property.media.filter((media: any) => media.typeId === 1);
+
+		if (images.length === 0) {
+			return <Fragment />
+		}
+
+		var imageUrls: string[] = [];
+
+		images.forEach((image: any) => {
+			imageUrls.push(buildMediaUrl(property.fileUrl, 1, image.name));
+		})
+
+		const largeImages = imageUrls.slice(0, 2);
+		const smallImages = imageUrls.slice(2);
+
+	
+		return (
+			<div className="property-images-container">
+				<div className="section-title">
+					Property Images
+				</div>
+				<div className="property-images-large">
+				{
+					largeImages.map((image, index) => (
+						<img className="property-image" src={image} alt="Property" key={index} />
+					))
+				}
+				</div>
+				<div className="property-images-grid">
+					{
+						smallImages.map((image, index) => (
+							<img className="property-image" src={image} alt="Property" key={index} />
+						))
+					}
+				</div>
+				
+			</div>
+		)
+	}
+
+
 	function mainContent() {
 		return (
 			<div className="results-container">
@@ -219,12 +270,17 @@ const SinglePropertyPage = () => {
 				{getFeatures()}
 				{/* Price ------ bed / bath */}
 				{getInfo()}
+				<div className="extra-info-container">
+
 				{/* Description */}
+				{getDescription()}
 				{/* Property Images */}
+				{getPropertyImages()}
 				{/* Map */}
 				{/* EPC */}
 				{/* Floorplan */}
 				{/* Brochure */}
+				</div>
 
 			</div>
 		);
