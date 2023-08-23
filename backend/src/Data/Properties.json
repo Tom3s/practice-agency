@@ -27,6 +27,58 @@
 			{
 				"typeId": 3,
 				"name": "0f61764ad8dadd0d97cd5a771a768721.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "012.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "1634905146_85.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "ab.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "brighton-house-figr-architecture-and-design_1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images10.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images23.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images28.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images40.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images43.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images9.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "lobby_view1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Modern-kitchen-interior-design-2.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "small-living-room-ideas-fatma-el-aminub9a8769-1673370515.jpg"
 			}
 		],
 		"mainPhoto": "07vh3NDeGh5Lx_141.webp"
@@ -55,7 +107,89 @@
 		"bedrooms": 1,
 		"bathrooms": 1,
 		"forSale": false,
-		"mainPhoto": "8bd82870-cb42-11e9-9a56-cf16cd66e478-how_big_is_a_mansion_anyway_what_to_know_about_these_large_houses-ogid-123839.jpg"
+		"mainPhoto": "8bd82870-cb42-11e9-9a56-cf16cd66e478-how_big_is_a_mansion_anyway_what_to_know_about_these_large_houses-ogid-123839.jpg",
+		"media": [
+			{
+				"typeId": 1,
+				"name": "5.tinyhome-1-1024x683.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "92884fe1c0975ea4a74ac4b45add96e7.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "9b03a91b55f5408980862881d9255102.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "BURL_282-1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Check-out-these-duplex-interior-design-ideas-FB-1200x700-compressed.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "green-accent-chair.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image14.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image17.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image24.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image27.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image28.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image7.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images12.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images26.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images30.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images37.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images4.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "large_444208_m_hlsgxamutawrmhlrpqu2omb.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "photo-1600585152220-90363fe7e115.png"
+			},
+			{
+				"typeId": 1,
+				"name": "tiny-house-style-modern.jpg"
+			}
+		]
 	},
 	{
 		"id": 3,
@@ -85,6 +219,78 @@
 			{
 				"typeId": 3,
 				"name": "10c907907c0234db96f8b00bde2bbc31.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "a938314e688f56ee245c458e0d5c24c1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "beige-sofa.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Contemporary-interior-design-and-decor-Urbanology-Designs.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Decor_interiors_and_more_kitchen_design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image10.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image8.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images21.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images35.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images36.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images44.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images6.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images8.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "IMG_3486-806x1024.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "interior-design-ideas-of-2022-banner-2.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "interior-layout.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Living_Room_Design_Concept.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "lush-modern-classic-residence-in-dubai.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Soldati-House-Interior-01.jpg"
 			}
 		],
 		"mainPhoto": "BWK-1-Tiburon-B-MC-4.jpg"
@@ -117,6 +323,66 @@
 			{
 				"typeId": 3,
 				"name": "165e9eda34110dbfc56303186093a8d8.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "a-gen-stockholm-living-room-industry-fantastic-frank-popular-copy-1561410782.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Coastal-house-interior-design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image20.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image23.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image6.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images3.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images39.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images7.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Kensington-Interior-Design-Architecture-1-670x420.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "luxury-home-design-on-budget.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "luxury-house-interior-hallway-office-room-fireplace-shiny-hardwood-floor-42252141.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "modern-house-design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "new-house-interior-design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "two-seater-couches-and-wall-mounts-design-hack.jpg"
 			}
 		],
 		"mainPhoto": "houses-with-black-windows.jpg"
@@ -149,6 +415,82 @@
 			{
 				"typeId": 3,
 				"name": "41236db238c04fa678876f0eabd458ce.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "03_JHID_NWHillsHouse.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Ana-Resim-3.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Black-house-interior-with-matt-black-colour_Archid.png"
+			},
+			{
+				"typeId": 1,
+				"name": "farnsworth-house-edith-farnsworth-country-house-installation_dezeen_2364_col_4.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Hikari-Box-Tiny-House-Interior-from-Loft-c6a708.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image1.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image11.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image16.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image2.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image3.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image31.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images29.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images32.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images47.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "modern-living-interior-design-1920x1139.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "pexels-photo-1571460.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "Tiny-house-with-amazing-interior-design_3.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "Title-Image-13_8046756588744.jpg"
 			}
 		],
 		"mainPhoto": "im-697060.avif"
@@ -177,7 +519,65 @@
 		],
 		"bedrooms": 2,
 		"bathrooms": 1,
-		"mainPhoto": "palazzo-royal-mansions-2-vxzjz.webp"
+		"mainPhoto": "palazzo-royal-mansions-2-vxzjz.webp",
+		"media": [
+			{
+				"typeId": 1,
+				"name": "All-white-interior-design-ideas-Sonia-C.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "e-interior-design-within-house-beautiful-interior-designs-for-small-bedrooms.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "FEATURE.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image19.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image30.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images17.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images18.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images22.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images25.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images34.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images45.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images48.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "interior-design-of-a-small-house.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "modernist-decor-inspiration-01.jpg"
+			}
+		]
 	},
 	{
 		"id": 7,
@@ -199,7 +599,73 @@
 		],
 		"bedrooms": 1,
 		"bathrooms": 1.5,
-		"mainPhoto": "white-brick-house-with-black-trim-23.jpg"
+		"mainPhoto": "white-brick-house-with-black-trim-23.jpg",
+		"media": [
+			{
+				"typeId": 1,
+				"name": "2.tinyhomes-1-1024x683.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "celia-barbados-villa-interior-photography-atinnakostukovky-dsc07574-hdr-64386279ca308.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "duplex-home-interior-design-in-india.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "e675fdaff9eff01341e1e4671b04bd4a.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Essential-Interior-Style-Guide-Fresh-Coastal-homes-HERO-1500-x-770__Resampled.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image4.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image9.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images11.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images15.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images16.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images19.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images41.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images5.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "interior-design-ideas-for-small-homes.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "modernist-decor-inspiration-07.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "oakleymoore-room1.jpg"
+			}
+		]
 	},
 	{
 		"id": 8,
@@ -217,6 +683,66 @@
 			{
 				"typeId": 3,
 				"name": "5870278a3b57261803f70b8edb98a607.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "0b83f348415081.5897c04fbf284.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "3d-rendering-modern-dining-room-living-room-with-luxury-decor-1300x698.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Contemporary-House-Interior-Design-1.1592613106.9601.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Essential-Interior-Style-Guide-Sophisticated-Spaces-Carlisle-homes-HERO-1500-x-770__Resampled.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "house-interior-design-kochi-ernakulam-kerala.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "House-Interior-Design.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image15.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image18.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image21.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image26.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "img-01-kitchen-scaled.jpg.optimal.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Interior-design-styles-Eclectic-contemporary-living-room-by-Jamie-C.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Lake-Snagov-House-interior-design-Hype-Project-1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "NjA3MTcxLmpwZw.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Title-living-room-dining-room-design.jpg"
 			}
 		],
 		"type": [
@@ -249,7 +775,117 @@
 			}
 		],
 		"bedrooms": 3,
-		"bathrooms": 2.5
+		"bathrooms": 2.5,
+		"media": [
+			{
+				"typeId": 1,
+				"name": "1000_F_561086014_SOomcF3Z62sM5iQ592WvwPCGFgnslsBb.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "40x60-4BHK-bungalow-design-bangalorearchitects-bedroom-design-1024x735.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Cover-5.png"
+			},
+			{
+				"typeId": 1,
+				"name": "Fabulous_modern_house_interior_design_concept_1.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "glasgow-landed-house-reno-singapore-interior-design-8-1024x683.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "image12.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image13.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image22.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image25.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image29.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image32.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "image5.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "images13.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images14.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images2.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images20.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images24.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images27.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images31.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images33.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images38.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images42.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "images46.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Interior-Design-Trends.jpg"
+			},
+			{
+				"typeId": 1,
+				"name": "Minimalist-MaxBurkhalter.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "Modern-tiny-house-interior.jpeg"
+			},
+			{
+				"typeId": 1,
+				"name": "Stunning-Interior-Design-for-House-Modern-Top-10-Tips-to-Design-Stylish-Homes.jpg"
+			}
+		]
 	},
 	{
 		"id": 10,

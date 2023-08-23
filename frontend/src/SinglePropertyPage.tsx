@@ -23,7 +23,7 @@ const SinglePropertyPage = () => {
 	function fetchProperty() {
 		const url = buildSinglePropertyUrl(id);
 
-		setLoading(true);
+		// setLoading(true);
 
 		console.log(url);
 
@@ -42,10 +42,11 @@ const SinglePropertyPage = () => {
 
 	useEffect(() => {
 		fetchProperty();
-	}, [])
+	}, [id])
 
 	useEffect(() => {
-		setLoading(false);
+		setLoading(!property.hasOwnProperty('id'));
+		console.log(property);
 	}, [property])
 
 
@@ -98,6 +99,74 @@ const SinglePropertyPage = () => {
 		)
 	}
 
+	function checkIfHasImages() {
+		return property.media.find((media: any) => media.typeId === 1);
+	}
+
+	function checkIfHasMapLocation() {
+		return property.address?.latitude && property.address?.longitude;
+	}
+
+	function checkIfHasEPC() {
+		return property.media.find((media: any) => media.typeId === 3);
+	}
+
+	function checkIfHasFloorplan() {
+		return property.media.find((media: any) => media.typeId === 2 );
+	}
+
+	function checkIfHasBrochure() {
+		return property.media.find((media: any) => media.typeId === 5);
+	}
+
+	function getFeatures() {
+		console.log(property);
+		return (
+			<div className="features-container">
+				{
+					checkIfHasImages() ?
+						<div className="feature">
+							<i className="fa fa-images" /> Images
+						</div>
+						:
+						<Fragment />
+				}
+				{
+					checkIfHasMapLocation() ?
+						<div className="feature">
+							<i className="fa fa-map" /> Map
+						</div>
+						:
+						<Fragment />
+				}
+				{
+					checkIfHasEPC() ?
+						<div className="feature">
+							<i className="fa fa-chart-bar" /> EPC
+						</div>
+						:
+						<Fragment />
+				}
+				{
+					checkIfHasFloorplan() ?
+						<div className="feature">
+							<i className="fa fa-file-alt" /> Floorplan
+						</div>
+						:
+						<Fragment />
+				}
+				{
+					checkIfHasBrochure() ?
+						<div className="feature">
+							<i className="fa fa-file-pdf" /> Brochure
+						</div>
+						:
+						<Fragment />
+				}
+			</div>
+		)
+	}
+
 	function mainContent() {
 		return (
 			<div className="results-container">
@@ -114,6 +183,7 @@ const SinglePropertyPage = () => {
 					{/* mainImage with title on top */}
 					{getMainImage()}
 					{/* Feature scroller */}
+					{getFeatures()}
 					{/* Price ------ bed / bath */}
 					{/* Description */}
 					{/* Property Images */}
@@ -128,17 +198,19 @@ const SinglePropertyPage = () => {
 		
 
 	return (
-		(
-			loading ?
-				<Loading />
-				:
-				(
-					id === '' ?
-						<Navigate to="/" />
-						:
-						mainContent()
-				)
-		)
+		<Fragment>
+			{
+				loading ?
+					<Loading />
+					:
+					(
+						property.hasOwnProperty('id') === false ?
+							<Navigate to={'/'} />
+							:
+							mainContent()
+					)
+			}
+		</Fragment>
 	);
 };
 

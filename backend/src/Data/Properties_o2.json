@@ -1,0 +1,273 @@
+[
+	{
+		"id": 1,
+		"name": "Cozy Cottage",
+		"address": {
+			"street": "123 Oak Street",
+			"town": "Smallville",
+			"latitude": 40.7128,
+			"longitude": -74.006
+		},
+		"description": "A charming cottage in a peaceful neighborhood. Perfect for a small family or couple. Close to schools and parks. Pets allowed.",
+		"price": 1500,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 2,
+				"name": "Cozy"
+			}
+		],
+		"bedrooms": 2,
+		"bathrooms": 1,
+		"forSale": false,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "0f61764ad8dadd0d97cd5a771a768721.jpg"
+			}
+		],
+		"mainPhoto": "07vh3NDeGh5Lx_141.webp"
+	},
+	{
+		"id": 2,
+		"name": "Modern Condo",
+		"address": {
+			"street": "456 Elm Street",
+			"town": "Metropolis",
+			"latitude": 34.0522,
+			"longitude": -118.2437
+		},
+		"description": "A sleek and modern condo in the heart of the city. Close to shops and restaurants. Pets allowed. No smoking. No children.",
+		"price": 3000,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 3,
+				"name": "Modern"
+			}
+		],
+		"bedrooms": 1,
+		"bathrooms": 1,
+		"forSale": false,
+		"mainPhoto": "8bd82870-cb42-11e9-9a56-cf16cd66e478-how_big_is_a_mansion_anyway_what_to_know_about_these_large_houses-ogid-123839.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Spacious Family Home",
+		"address": {
+			"street": "789 Maple Lane",
+			"town": "Suburbia",
+			"latitude": 37.7749,
+			"longitude": -122.4194
+		},
+		"description": "A large and comfortable family home with plenty of space. Close to schools and parks. Pets allowed.",
+		"price": 450000,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 4,
+				"name": "Family"
+			}
+		],
+		"bedrooms": 4,
+		"bathrooms": 2,
+		"forSale": true,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "10c907907c0234db96f8b00bde2bbc31.jpg"
+			}
+		],
+		"mainPhoto": "BWK-1-Tiburon-B-MC-4.jpg"
+	},
+	{
+		"id": 4,
+		"name": "Luxury Penthouse",
+		"address": {
+			"street": "101 Highrise Avenue",
+			"town": "City Heights",
+			"latitude": 41.8781,
+			"longitude": -87.6298
+		},
+		"description": "An elegant penthouse with stunning views of the city skyline. Close to shops and restaurants. Smoking and pets allowed. ",
+		"price": 1200000,
+		"type": [
+			{
+				"id": 5,
+				"name": "Luxury"
+			},
+			{
+				"id": 3,
+				"name": "Modern"
+			}
+		],
+		"bedrooms": 3,
+		"bathrooms": 3,
+		"forSale": true,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "165e9eda34110dbfc56303186093a8d8.jpg"
+			}
+		],
+		"mainPhoto": "houses-with-black-windows.jpg"
+	},
+	{
+		"id": 5,
+		"name": "Rustic Cabin",
+		"address": {
+			"street": "234 Pine Road",
+			"town": "Mountainville",
+			"latitude": 39.7392,
+			"longitude": -104.9903
+		},
+		"description": "A charming rustic cabin nestled in the mountains. This cozy home is perfect for a small family or couple. No smoking. No pets. If you enjoy the outdoors, this is the home for you!",
+		"price": 2500,
+		"type": [
+			{
+				"id": 6,
+				"name": "Rustic"
+			},
+			{
+				"id": 7,
+				"name": "Cabin"
+			}
+		],
+		"bedrooms": 2,
+		"bathrooms": 1,
+		"forSale": false,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "41236db238c04fa678876f0eabd458ce.jpg"
+			}
+		],
+		"mainPhoto": "im-697060.avif"
+	},
+	{
+		"id": 6,
+		"name": "Quaint Bungalow",
+		"address": {
+			"street": "567 Willow Lane",
+			"town": "Suburbia",
+			"latitude": 37.7749,
+			"longitude": -122.4194
+		},
+		"description": "A cozy bungalow with a lush backyard garden. Never before on the market. Close to schools and parks. Pets allowed. Only serious inquiries please. Enjoy your morning coffee on the front porch swing!",
+		"price": 280000,
+		"forSale": true,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			},
+			{
+				"id": 2,
+				"name": "Cozy"
+			}
+		],
+		"bedrooms": 2,
+		"bathrooms": 1,
+		"mainPhoto": "palazzo-royal-mansions-2-vxzjz.webp"
+	},
+	{
+		"id": 7,
+		"name": "Urban Loft",
+		"address": {
+			"street": "890 Loft Avenue",
+			"town": "Metropolis",
+			"latitude": 34.0522,
+			"longitude": -118.2437
+		},
+		"description": "An industrial-style loft in the heart of the city.",
+		"price": 600000,
+		"forSale": true,
+		"type": [
+			{
+				"id": 3,
+				"name": "Modern"
+			}
+		],
+		"bedrooms": 1,
+		"bathrooms": 1.5,
+		"mainPhoto": "white-brick-house-with-black-trim-23.jpg"
+	},
+	{
+		"id": 8,
+		"name": "Mountain Retreat",
+		"address": {
+			"street": "901 Pine Road",
+			"town": "Mountainville",
+			"latitude": 39.7392,
+			"longitude": -104.9903
+		},
+		"description": "A peaceful retreat in the mountains with breathtaking views. Finely crafted woodwork throughout. Close to hiking trails and ski slopes. No smoking. No pets. Over the river and through the woods...",
+		"price": 220000,
+		"forSale": true,
+		"media": [
+			{
+				"typeId": 3,
+				"name": "5870278a3b57261803f70b8edb98a607.jpg"
+			}
+		],
+		"type": [
+			{
+				"id": 6,
+				"name": "Rustic"
+			},
+			{
+				"id": 7,
+				"name": "Cabin"
+			}
+		],
+		"bedrooms": 3,
+		"bathrooms": 2
+	},
+	{
+		"id": 9,
+		"name": "Suburban Townhouse",
+		"address": {
+			"latitude": 41.8781,
+			"longitude": -87.6298
+		},
+		"description": "A modern townhouse in a quiet suburban neighborhood. Notable features include a spacious kitchen and a large backyard. Renovation completed in 2019. Close to schools and parks. Pets allowed.",
+		"price": 320000,
+		"forSale": true,
+		"type": [
+			{
+				"id": 5,
+				"name": "Luxury"
+			}
+		],
+		"bedrooms": 3,
+		"bathrooms": 2.5
+	},
+	{
+		"id": 10,
+		"name": "Renovator's Dream",
+		"address": {
+			"street": "1122 Elm Street",
+			"town": "Metropolis",
+			"latitude": 34.0522,
+			"longitude": -118.2437
+		},
+		"description": "A fixer-upper project with great potential.",
+		"price": 1500,
+		"forSale": false,
+		"type": [
+			{
+				"id": 1,
+				"name": "Detached"
+			}
+		]
+	}
+]
