@@ -3,6 +3,7 @@ import { Address, Property, PropertyType, SearchOptions } from "../Model/EntityM
 import { Result } from "../Model/StateModels";
 import PropertyRepo from "../Repos/EstateRepo";
 import fs from 'fs';
+import { match } from "assert";
 
 class Controller {
 	private propertyRepo: PropertyRepo;
@@ -43,39 +44,32 @@ class Controller {
 
 	getMedia(typeId: number, mediaName: string): Result<string> {
 		var filePath: string = '../../src';
-		if (typeId === 1) {
-			// return new Result(
-			// 	true,
-			// 	'Operation successful',
-			// 	200,
-			// 	`/images/property/${mediaName}`
-			// )
-			filePath += `/images/property/${mediaName}`;
-		} else if (typeId === 2) {
-			// return new Result(
-			// 	true,
-			// 	'Operation successful',
-			// 	200,
-			// 	`/images/floorplan/${mediaName}`
-			// )
-			filePath += `/images/floorplan/${mediaName}`;
-		} else if (typeId === 3) {
-			// return new Result(
-			// 	true,
-			// 	'Operation successful',
-			// 	200,
-			// 	`/images/epc/${mediaName}`
-			// )
-			filePath += `/images/epc/${mediaName}`;
-		} else if (typeId === 5) {
-			// return new Result(
-			// 	true,
-			// 	'Operation successful',
-			// 	200,
-			// 	`/media/brochure/${mediaName}`
-			// )
-			filePath += `/images/brochure/${mediaName}`;
-		}
+		// if (typeId === 1) {
+		// 	filePath += `/images/property/${mediaName}`;
+		// } else if (typeId === 2) {
+		// 	filePath += `/images/floorplan/${mediaName}`;
+		// } else if (typeId === 3) {
+		// 	filePath += `/images/epc/${mediaName}`;
+		// } else if (typeId === 5) {
+		// 	filePath += `/images/brochure/${mediaName}`;
+		// }
+		switch(typeId) {
+			case 0:
+				filePath += `/images/thumbnails/${mediaName}`;
+				break;
+			case 1:
+				filePath += `/images/property/${mediaName}`;
+				break;
+			case 2:
+				filePath += `/images/floorplan/${mediaName}`;
+				break;
+			case 3:
+				filePath += `/images/epc/${mediaName}`;
+				break;
+			case 5:
+				filePath += `/images/brochure/${mediaName}`;
+				break;
+		};
 
 		console.log(filePath);
 
