@@ -2,6 +2,11 @@
 	width: 80vw;
 }
 
+.rounded-sized {
+	border-radius: 50%;
+	width: 80vw;
+}
+
 .search-container {
 	display: flex;
 	justify-content: center;
