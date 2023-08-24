@@ -1,5 +1,5 @@
 class Property {
-	public fileUrl: string = '/media/';
+	public fileUrl?: string;
 	constructor(
 		public id: number,
 		public name: string,
@@ -10,7 +10,7 @@ class Property {
 		public bedrooms: number,
 		public bathrooms: number,
 		public forSale: boolean,
-		public media: Media[],
+		public media: Media[]
 	){}
 }
 
@@ -40,13 +40,6 @@ class Media {
 		public name: string,
 	){}
 }
-
-// interface SearchOptions {
-// 	location?: string,
-// 	maxPrice?: number,
-// 	type?: string,
-// 	bedrooms?: number,
-// }
 
 class SearchOptions {
 	public location?: string;

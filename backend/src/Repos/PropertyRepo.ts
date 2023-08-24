@@ -8,23 +8,23 @@ function deepCopy<T>(obj: T): T {
 
 class PropertyRepo {
 	
-	private list: Array<Property>;
+	private list: Property[];
 
 	constructor() {
 		const filePath = path.join(__dirname, '../../src/Data/Properties.json');
 
 
-		this.list = require(filePath);
+		this.list = require(filePath) as Property[];
 
 		for (const property of this.list) {
 			property.fileUrl = '/media/';
 		}
 	}
 
-	getAllSale(): Result<Array<Property>> {
+	getAllSale(): Result<Property[]> {
 
-		const saleListings: Array<Property> = this.list.filter((property: Property) => {
-			return property.forSale;
+		const saleListings: Property[] = this.list.filter((property: Property) => {
+			return property?.forSale;
 		});
 
 		if (saleListings.length === 0) {
@@ -43,10 +43,10 @@ class PropertyRepo {
 		)
 	}
 
-	getAllLetting(): Result<Array<Property>> {
+	getAllLetting(): Result<Property[]> {
 		
-		const lettingListings: Array<Property> = this.list.filter((property: Property) => {
-			return !property.forSale;
+		const lettingListings: Property[] = this.list.filter((property: Property) => {
+			return !property?.forSale;
 		});
 
 		if (lettingListings.length === 0) {
@@ -65,39 +65,25 @@ class PropertyRepo {
 		)
 	}
 
-	getSaleFiltered(searchOptions: SearchOptions): Result<Array<Property>> {
-		const saleListings: Array<Property> = this.list.filter((property: Property) => {
-			return property.forSale;
-		});
+	getSaleFiltered(searchOptions: SearchOptions): Result<Property[]> {
+		const saleListings: Property[] = this.getAllSale().data as Property[];
 
-		const filteredListings: Array<Property> = saleListings.filter((property: Property) => {
-			if (searchOptions.location !== undefined) {
-				if (property.address.town === undefined) {
-					return false;
-				}
-				if (property.address.town.toLowerCase() !== searchOptions.location?.toLowerCase()) {
-					return false;
-				}
+		const filteredListings: Property[] = saleListings.filter((property: Property) => {
+			if (searchOptions.location) {
+				return property.address?.town?.toLowerCase() === searchOptions.location?.toLowerCase();
 			}
 
-			if (searchOptions.maxPrice !== undefined) {
-				if (property.price > searchOptions.maxPrice) {
-					return false;
-				}
+			if (searchOptions.maxPrice) {
+				return property.price <= searchOptions.maxPrice;
 			}
 
-			if (searchOptions.bedrooms !== undefined) {
-				if (property.bedrooms === undefined) {
-					return false;
-				}
-				if (property.bedrooms < searchOptions.bedrooms) {
-					return false;
-				}
+			if (searchOptions.bedrooms) {
+				return property?.bedrooms >= searchOptions.bedrooms;
 			}
 
-			if (searchOptions.type !== undefined) {
+			if (searchOptions.type) {
 				for (const type of searchOptions.type) {
-					if (!property.type.filter(propertyType => propertyType.id === type).length) {
+					if (!property.type?.filter(propertyType => propertyType?.id === type).length) {
 						return false;
 					}
 				}
@@ -122,39 +108,27 @@ class PropertyRepo {
 		)
 	}
 
-	getLettingFiltered(searchOptions: SearchOptions): Result<Array<Property>> {
-		const lettingListings: Array<Property> = this.list.filter((property: Property) => {
+	getLettingFiltered(searchOptions: SearchOptions): Result<Property[]> {
+		const lettingListings: Property[] = this.list.filter((property: Property) => {
 			return !property.forSale;
 		});
 
-		const filteredListings: Array<Property> = lettingListings.filter((property: Property) => {
-			if (searchOptions.location !== undefined) {
-				if (property.address.town === undefined) {
-					return false;
-				}
-				if (property.address.town.toLowerCase() !== searchOptions.location?.toLowerCase()) {
-					return false;
-				}
+		const filteredListings: Property[] = lettingListings.filter((property: Property) => {
+			if (searchOptions.location) {
+				return property.address?.town?.toLowerCase() === searchOptions.location?.toLowerCase();
 			}
 
-			if (searchOptions.maxPrice !== undefined) {
-				if (property.price > searchOptions.maxPrice) {
-					return false;
-				}
+			if (searchOptions.maxPrice) {
+				return property.price <= searchOptions.maxPrice;
+			}
+			
+			if (searchOptions.bedrooms) {
+				return property?.bedrooms >= searchOptions.bedrooms;
 			}
 
-			if (searchOptions.bedrooms !== undefined) {
-				if (property.bedrooms === undefined) {
-					return false;
-				}
-				if (property.bedrooms < searchOptions.bedrooms) {
-					return false;
-				}
-			}
-
-			if (searchOptions.type !== undefined) {
+			if (searchOptions.type) {
 				for (const type of searchOptions.type) {
-					if (!property.type.filter(propertyType => propertyType.id === type).length) {
+					if (!property.type?.filter(propertyType => propertyType?.id === type).length) {
 						return false;
 					}
 				}
@@ -179,11 +153,11 @@ class PropertyRepo {
 		)
 	}
 
-	getAllSaleLocations(): Result<Array<string>> {
-		const saleListings: Array<Property> = this.getAllSale().data as Array<Property>;
+	getAllSaleLocations(): Result<string[]> {
+		const saleListings: Property[] = this.getAllSale().data as Property[];
 
-		const locations: Array<string> = saleListings.map((property: Property) => {	
-			return property.address.town;
+		const locations: string[] = saleListings.map((property: Property) => {	
+			return property?.address?.town;
 		});
 
 		const filteredLocations: string[] = locations.filter((location: string) => {
@@ -198,11 +172,11 @@ class PropertyRepo {
 		)
 	}
 
-	getAllLettingLocations(): Result<Array<string>> {
-		const lettingListings: Array<Property> = this.getAllLetting().data as Array<Property>;
+	getAllLettingLocations(): Result<string[]> {
+		const lettingListings: Property[] = this.getAllLetting().data as Property[];
 
-		const locations: Array<string> = lettingListings.map((property: Property) => {	
-			return property.address.town;
+		const locations: string[] = lettingListings.map((property: Property) => {	
+			return property?.address?.town;
 		});
 
 		const filteredLocations: string[] = locations.filter((location: string) => {
@@ -218,7 +192,7 @@ class PropertyRepo {
 	}
 
 	getAllSaleTypes(): Result<PropertyType[]> {
-		const saleListings: Array<Property> = this.getAllSale().data as Array<Property>;
+		const saleListings: Property[] = this.getAllSale().data as Property[];
 
 		const types: PropertyType[] = [];
 
@@ -245,7 +219,7 @@ class PropertyRepo {
 	}
 
 	getAllLettingTypes(): Result<PropertyType[]> {
-		const lettingListings: Array<Property> = this.getAllLetting().data as Array<Property>;
+		const lettingListings: Property[] = this.getAllLetting().data as Property[];
 
 		const types: PropertyType[] = [];
 
