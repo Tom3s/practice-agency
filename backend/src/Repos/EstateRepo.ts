@@ -75,7 +75,7 @@ class PropertyRepo {
 				if (property.address.town === undefined) {
 					return false;
 				}
-				if (property.address.town.toLowerCase() !== searchOptions.location.toLowerCase()) {
+				if (property.address.town.toLowerCase() !== searchOptions.location?.toLowerCase()) {
 					return false;
 				}
 			}
@@ -132,7 +132,7 @@ class PropertyRepo {
 				if (property.address.town === undefined) {
 					return false;
 				}
-				if (property.address.town.toLowerCase() !== searchOptions.location.toLowerCase()) {
+				if (property.address.town.toLowerCase() !== searchOptions.location?.toLowerCase()) {
 					return false;
 				}
 			}
