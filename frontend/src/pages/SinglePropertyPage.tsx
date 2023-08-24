@@ -1,14 +1,17 @@
-import { Fragment, useEffect, useState } from "react";
-import searchLogo from './images/Image 1@3x.png';
+import { Fragment, useEffect, useRef, useState } from "react";
+import searchLogo from '../images/Image 1@3x.png';
 import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import '../stylesheets/ResultsPage.css';
 import '../stylesheets/SinglePropertyPage.css'
 import Loading from "./Loading";
 import { buildSinglePropertyUrl, buildMediaUrl } from "../util/UrlBuilder";
+import ErrorSnack from "../util/ErrorSnack";
 
 
 
 const SinglePropertyPage = () => {
+
+	const errorSnackRef = useRef<ErrorSnack>(null);
 
 	const navigate = useNavigate();
 	const [searchParams, setSearchParams] = useSearchParams();
@@ -38,6 +41,10 @@ const SinglePropertyPage = () => {
 			.then(data => {
 				setProperty(data);
 			})
+			.catch(error => {
+				console.error('There was an error!', error);
+				errorSnackRef.current?.openError();
+			});
 	}
 
 	useEffect(() => {
@@ -396,6 +403,7 @@ const SinglePropertyPage = () => {
 							mainContent()
 					)
 			}
+			<ErrorSnack ref={errorSnackRef} />
 		</Fragment>
 	);
 };

@@ -1,12 +1,15 @@
-import { Fragment, useEffect, useState } from "react";
-import searchLogo from './images/Image 1@3x.png';
+import { Fragment, useEffect, useRef, useState } from "react";
+import searchLogo from '../images/Image 1@3x.png';
 import '../stylesheets/ResultsPage.css';
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Loading from "./Loading";
 import { BuildUrl, buildMediaUrl } from "../util/UrlBuilder";
+import ErrorSnack from "../util/ErrorSnack";
 
 
 const ResultsPage = () => {
+
+	const errorSnackRef = useRef<ErrorSnack>(null);
 
 	const navigate = useNavigate();
 	const [searchParams, setSearchParams] = useSearchParams();
@@ -45,6 +48,10 @@ const ResultsPage = () => {
 				console.log(data);
 				setResults(data);
 			})
+			.catch(error => {
+				console.error('There was an error!', error);
+				errorSnackRef.current?.openError();
+			});
 	}
 
 
@@ -200,6 +207,7 @@ const ResultsPage = () => {
 					:
 					mainContent()
 			}
+			<ErrorSnack ref={errorSnackRef} />
 		</Fragment>
 	);
 }

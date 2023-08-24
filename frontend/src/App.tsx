@@ -8,10 +8,10 @@ import SinglePropertyPage from './pages/SinglePropertyPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'/practice-agency'} >
 		<Routes>
-			<Route path='/search' element={<SearchPage />} />
 			<Route path='/' element={<Navigate to={'/search'} />} />
+			<Route path='/search' element={<SearchPage />} />
 			<Route path='/results' element={<ResultsPage />} />
 			<Route path='/property' element={<SinglePropertyPage />} />
 		</Routes>

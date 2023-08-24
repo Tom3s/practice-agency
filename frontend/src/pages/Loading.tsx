@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import loadingLogo from './images/olympusLogo_white@3x.png';
+import loadingLogo from '../images/olympusLogo_white@3x.png';
 import '../stylesheets/Loading.css'
 
 const Loading = () => {
