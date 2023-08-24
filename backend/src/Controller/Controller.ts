@@ -28,7 +28,7 @@ class Controller {
 		return this.propertyRepo.getLettingFiltered(searchOptions);
 	}
 
-	getLocations(transactionType: number): Result<Array<string>> {
+	getLocations(transactionType: number): Result<string[]> {
 		if (transactionType === 1) {
 			return this.propertyRepo.getAllSaleLocations();
 		}
@@ -44,15 +44,7 @@ class Controller {
 
 	getMedia(typeId: number, mediaName: string): Result<string> {
 		var filePath: string = '../../src';
-		// if (typeId === 1) {
-		// 	filePath += `/images/property/${mediaName}`;
-		// } else if (typeId === 2) {
-		// 	filePath += `/images/floorplan/${mediaName}`;
-		// } else if (typeId === 3) {
-		// 	filePath += `/images/epc/${mediaName}`;
-		// } else if (typeId === 5) {
-		// 	filePath += `/images/brochure/${mediaName}`;
-		// }
+		var validMediaType: boolean = true;
 		switch(typeId) {
 			case 0:
 				filePath += `/images/thumbnails/${mediaName}`;
@@ -69,12 +61,14 @@ class Controller {
 			case 5:
 				filePath += `/images/brochure/${mediaName}`;
 				break;
+			default:
+				validMediaType = false;
+				break;
 		};
 
 		console.log(filePath);
 
-
-		if (filePath === '../../src') {
+		if (!validMediaType) {
 			return new Result(
 				false,
 				'Invalid media type',
