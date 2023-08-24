@@ -1,0 +1,23 @@
+.logo {
+	width: 80vw;
+	margin-bottom: 20px;
+	margin-top: 20px;
+
+}
+
+.rounded-sized {
+	border-radius: 50%;
+	width: 80vw;
+	margin-bottom: 20px;
+}
+
+.search-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+
+	height: 100vh;
+	width: 100vw;
+}

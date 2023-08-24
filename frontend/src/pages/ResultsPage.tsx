@@ -1,9 +1,9 @@
 import { Fragment, useEffect, useState } from "react";
 import searchLogo from './images/Image 1@3x.png';
-import './ResultsPage.css';
+import '../stylesheets/ResultsPage.css';
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { buildMediaUrl, BuildUrl } from "./UrlBuilder";
 import Loading from "./Loading";
+import { BuildUrl, buildMediaUrl } from "../util/UrlBuilder";
 
 
 const ResultsPage = () => {

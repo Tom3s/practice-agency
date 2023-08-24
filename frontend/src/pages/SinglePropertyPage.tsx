@@ -1,10 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import searchLogo from './images/Image 1@3x.png';
 import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
-import './ResultsPage.css';
-import './SinglePropertyPage.css'
-import { buildMediaUrl, buildSinglePropertyUrl } from "./UrlBuilder";
+import '../stylesheets/ResultsPage.css';
+import '../stylesheets/SinglePropertyPage.css'
 import Loading from "./Loading";
+import { buildSinglePropertyUrl, buildMediaUrl } from "../util/UrlBuilder";
 
 
 
@@ -365,25 +365,16 @@ const SinglePropertyPage = () => {
 					<img className="logo" src={searchLogo} alt="Olympus Logo" />
 				</div>
 
-				{/* mainImage with title on top */}
 				{getMainImage()}
-				{/* Feature scroller */}
 				{getFeatures()}
-				{/* Price ------ bed / bath */}
 				{getInfo()}
 				<div className="extra-info-container">
 
-					{/* Description */}
 					{getDescription()}
-					{/* Property Images */}
 					{getPropertyImages()}
-					{/* Map */}
 					{getMap()}
-					{/* EPC */}
 					{getEPC()}
-					{/* Floorplan */}
 					{getFloorplan()}
-					{/* Brochure */}
 					{getBrochure()}
 				</div>
 

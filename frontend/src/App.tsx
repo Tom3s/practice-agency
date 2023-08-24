@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './stylesheets/App.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import SearchPage from './SearchPage';
-import ResultsPage from './ResultsPage';
-import SinglePropertyPage from './SinglePropertyPage';
+import ResultsPage from './pages/ResultsPage';
+import SearchPage from './pages/SearchPage';
+import SinglePropertyPage from './pages/SinglePropertyPage';
 
 function App() {
   return (
