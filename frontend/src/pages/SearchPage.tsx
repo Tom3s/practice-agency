@@ -71,7 +71,7 @@ const SearchPage = () => {
 		setPriceLabel(currentTransactionType === 'sale' ? 'Max Price' : 'Max Price (Per Month)');
 		setPrices(currentTransactionType === 'sale' ? salePrices : lettingPrices);
 
-	}, [currentTransactionType])
+	}, [currentTransactionType, fetchLocations, fetchPropertyTypes])
 
 	function handleTransactionTypeChange(event: React.MouseEvent<HTMLElement>, newTransactionType: string) {
 		setCurrentTransactionType(newTransactionType);

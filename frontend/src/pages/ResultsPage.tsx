@@ -12,7 +12,9 @@ const ResultsPage = () => {
 	const errorSnackRef = useRef<ErrorSnack>(null);
 
 	const navigate = useNavigate();
-	const [searchParams, setSearchParams] = useSearchParams();
+	// const [searchParams, setSearchParams] = useSearchParams();
+	const searchParams = useSearchParams()[0];
+
 
 	const transactionType = searchParams.get('transaction-type') || 'sale';
 
@@ -57,11 +59,11 @@ const ResultsPage = () => {
 
 	useEffect(() => {
 		fetchResults();
-	}, [])
+	})
 
 	useEffect(() => {
 		setLoading(results.length === 0 && !emptyResults);
-	}, [results])
+	}, [results, emptyResults])
 
 	function getResultInfo(title: string, bedrooms: number, bathrooms: number, description: string) {
 

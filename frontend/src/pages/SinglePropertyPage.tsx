@@ -14,7 +14,8 @@ const SinglePropertyPage = () => {
 	const errorSnackRef = useRef<ErrorSnack>(null);
 
 	const navigate = useNavigate();
-	const [searchParams, setSearchParams] = useSearchParams();
+	// const [searchParams, setSearchParams] = useSearchParams();
+	const searchParams = useSearchParams()[0];
 
 	// const id = searchParams.get('id') || '';
 	const [id, setId] = useState<string>(searchParams.get('id') || '');
@@ -49,7 +50,7 @@ const SinglePropertyPage = () => {
 
 	useEffect(() => {
 		fetchProperty();
-	}, [id])
+	}, [id, fetchProperty])
 
 	useEffect(() => {
 		setLoading(!property.hasOwnProperty('id'));
@@ -289,6 +290,7 @@ const SinglePropertyPage = () => {
 				</div>
 
 				<iframe
+					title="map"
 					className="map"
 					loading="lazy"
 					allowFullScreen

@@ -1,4 +1,4 @@
-import { Button, IconButton, Snackbar } from "@mui/material";
+import { IconButton, Snackbar } from "@mui/material";
 import React from "react";
 import { Fragment } from "react";
 
@@ -45,9 +45,9 @@ class ErrorSnack extends React.Component<{}, ErrorSnackState> {
 
 	render(): React.ReactNode {
 
-		const {
-			open
-		} = this.state;
+		// const {
+		// 	open
+		// } = this.state;
 
 
 		return (

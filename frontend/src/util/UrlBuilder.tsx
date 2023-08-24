@@ -1,5 +1,3 @@
-import { exitCode } from "process";
-
 const API_KEY = 'api-key=xYfyViCWX3ghasznzOK3jWwFhLtDRrUN';
 
 function buildQueryParams(type: string, location: string, price: string, propertyType: string[], bedroom: string, apiKey: boolean): string {
