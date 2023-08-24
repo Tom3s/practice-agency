@@ -13,8 +13,9 @@ function setupRoutes(app: Express, controller: Controller): void {
 	app.get('/v2/property/residential/sale', async (request: Request, response: Response) => {
 
 		const apiKey: string = request.query['api-key'] as string;
-		if (controller.validateApiKey(apiKey).data === false) {
-			response.status(401).send('Invalid API key');
+		const validApiKey: Result<boolean> = controller.validateApiKey(apiKey);
+		if (validApiKey.data === false) {
+			response.status(validApiKey.status).send(validApiKey.message);
 			return;
 		}
 
@@ -46,8 +47,9 @@ function setupRoutes(app: Express, controller: Controller): void {
 	app.get('/v2/property/residential/letting', async (request: Request, response: Response) => {
 		
 		const apiKey: string = request.query['api-key'] as string;
-		if (controller.validateApiKey(apiKey).data === false) {
-			response.status(401).send('Invalid API key');
+		const validApiKey: Result<boolean> = controller.validateApiKey(apiKey);
+		if (validApiKey.data === false) {
+			response.status(validApiKey.status).send(validApiKey.message);
 			return;
 		}
 		const searchOptions: SearchOptions = new SearchOptions();
@@ -65,7 +67,7 @@ function setupRoutes(app: Express, controller: Controller): void {
 			searchOptions.addBedrooms(parseInt(request.query['min-bed'] as string));
 		} 
 		
-		const result: Result<Array<Property>> = await controller.getResidentialLettingProperties(searchOptions);
+		const result: Result<Property[]> = await controller.getResidentialLettingProperties(searchOptions);
 		if (result.success) {
 			response.status(result.status).send(result.data);
 			return;
@@ -75,14 +77,13 @@ function setupRoutes(app: Express, controller: Controller): void {
 
 	app.get('/v2/property/location', async (request: Request, response: Response) => {
 		const apiKey: string = request.query['api-key'] as string;
-		if (controller.validateApiKey(apiKey).data === false) {
-			response.status(401).send('Invalid API key');
+		const validApiKey: Result<boolean> = controller.validateApiKey(apiKey);
+		if (validApiKey.data === false) {
+			response.status(validApiKey.status).send(validApiKey.message);
 			return;
 		}
 		const transactionType: number = parseInt(request.query['transaction-type'] as string); 
-		const result: Result<Array<string>> = await controller.getLocations(transactionType);
-
-		console.log(result.data);
+		const result: Result<string[]> = await controller.getLocations(transactionType);
 
 		if (result.success) {
 			response.status(result.status).send(result.data);
@@ -93,8 +94,9 @@ function setupRoutes(app: Express, controller: Controller): void {
 
 	app.get('/v2/property/type', async (request: Request, response: Response) => {
 		const apiKey: string = request.query['api-key'] as string;
-		if (controller.validateApiKey(apiKey).data === false) {
-			response.status(401).send('Invalid API key');
+		const validApiKey: Result<boolean> = controller.validateApiKey(apiKey);
+		if (validApiKey.data === false) {
+			response.status(validApiKey.status).send(validApiKey.message);
 			return;
 		}
 		const transactionType: number = parseInt(request.query['transaction-type'] as string); 
@@ -112,16 +114,15 @@ function setupRoutes(app: Express, controller: Controller): void {
 
 		const needApiKey: boolean = typeId !== 5;
 
-
 		const apiKey: string = request.query['api-key'] as string;
-		if (needApiKey && controller.validateApiKey(apiKey).data === false) {
-			response.status(401).send('Invalid API key');
+		const validApiKey: Result<boolean> = controller.validateApiKey(apiKey);
+
+		if (needApiKey && validApiKey.data === false) {
+			response.status(validApiKey.status).send(validApiKey.message);
 			return;
 		}
 		const mediaName: string = request.params['mediaName'];
 		const result: Result<string> = await controller.getMedia(typeId, mediaName);
-
-		console.log(result.data);
 
 		if (result.success) {
 			response.status(result.status).sendFile(result.data as string);
@@ -132,16 +133,14 @@ function setupRoutes(app: Express, controller: Controller): void {
 
 	app.get('/v2/property/residential/:type/:id', async (request: Request, response: Response) => {
 		const apiKey: string = request.query['api-key'] as string;
-		if (controller.validateApiKey(apiKey).data === false) {
-			response.status(401).send('Invalid API key');
+		const validApiKey: Result<boolean> = controller.validateApiKey(apiKey);
+		if (validApiKey.data === false) {
+			response.status(validApiKey.status).send(validApiKey.message);
 			return;
 		}
 
 		const type: string = request.params['type'];
 		const id: number = parseInt(request.params['id']);
-
-		console.log(type);
-		console.log(id);
 
 		const result: Result<Property> = await controller.getProperty(type, id);
 

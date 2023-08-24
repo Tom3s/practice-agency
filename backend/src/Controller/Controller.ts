@@ -1,7 +1,7 @@
 import path from "path";
 import { Address, Property, PropertyType, SearchOptions } from "../Model/EntityModels";
 import { Result } from "../Model/StateModels";
-import PropertyRepo from "../Repos/EstateRepo";
+import PropertyRepo from "../Repos/PropertyRepo";
 import fs from 'fs';
 import { match } from "assert";
 

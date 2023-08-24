@@ -16,7 +16,7 @@ const cors = require('cors');
 app.use(cors({
     origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'token']
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 (0, SetupRoutes_1.default)(app, controller);
 app.listen(port, () => {
