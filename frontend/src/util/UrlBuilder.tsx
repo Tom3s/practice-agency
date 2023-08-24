@@ -1,4 +1,5 @@
 const API_KEY = 'api-key=xYfyViCWX3ghasznzOK3jWwFhLtDRrUN';
+const BASE_URL = 'http://localhost:8000/';
 
 function buildQueryParams(type: string, location: string, price: string, propertyType: string[], bedroom: string, apiKey: boolean): string {
 	var params = [];
@@ -23,7 +24,7 @@ function buildQueryParams(type: string, location: string, price: string, propert
 }
 
 function BuildUrl(type: string, location: string, price: string, propertyType: string[], bedroom: string): string {
-	var baseUrl = 'http://localhost:8000/v2/property/residential/';
+	var baseUrl = BASE_URL + 'v2/property/residential/';
 	baseUrl += type + '?';
 	
 	baseUrl += buildQueryParams('', location, price, propertyType, bedroom, true);
@@ -32,7 +33,7 @@ function BuildUrl(type: string, location: string, price: string, propertyType: s
 }
 
 function buildMediaUrl(fileUrl: string, mediaType: number, mediaName: string): string {
-	var url = 'http://localhost:8000/v2'
+	var url = BASE_URL + 'v2'
 
 	url += fileUrl;
 	url += mediaType.toString() + '/';
@@ -48,7 +49,7 @@ function buildMediaUrl(fileUrl: string, mediaType: number, mediaName: string): s
 }
 
 function buildSinglePropertyUrl(id: string): string {
-	var url = 'http://localhost:8000/v2/property/residential/';
+	var url = BASE_URL + 'v2/property/residential/';
 	if (Math.random() > 0.5) {
 		url += 'sale/';
 	}
@@ -61,7 +62,7 @@ function buildSinglePropertyUrl(id: string): string {
 }
 
 function buildTypeFetchUrl(transactionType: string): string {
-	var url = 'http://localhost:8000/v2/property/type?';
+	var url = BASE_URL + 'v2/property/type?';
 	url += 'transaction-type=' + transactionType;
 	url += '&' + API_KEY;
 
@@ -69,7 +70,7 @@ function buildTypeFetchUrl(transactionType: string): string {
 }
 
 function buildLocationFetchUrl(transactionType: string): string {
-	var url = 'http://localhost:8000/v2/property/location?';
+	var url = BASE_URL + 'v2/property/location?';
 	url += 'transaction-type=' + transactionType;
 	url += '&' + API_KEY;
 
