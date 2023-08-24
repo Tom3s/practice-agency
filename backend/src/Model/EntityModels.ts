@@ -68,6 +68,10 @@ class SearchOptions {
 		this.type = type.split(',').map((type: string) => {
 			return parseInt(type);
 		});
+
+		this.type = this.type.filter((type: number) => {
+			return !isNaN(type);
+		});
 	}
 
 	addBedrooms(bedrooms: number): void {
