@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/practice-agency/static/css/main.bce886e1.css",
-    "main.js": "/practice-agency/static/js/main.1d13a17b.js",
+    "main.js": "/practice-agency/static/js/main.0db0c85e.js",
     "static/js/787.28cb0dcd.chunk.js": "/practice-agency/static/js/787.28cb0dcd.chunk.js",
     "static/media/Image 1@3x.png": "/practice-agency/static/media/Image 1@3x.2227734989742ff8cef0.png",
     "static/media/olympusLogo_white@3x.png": "/practice-agency/static/media/olympusLogo_white@3x.671dadbd8e1cbcabf62f.png",
     "index.html": "/practice-agency/index.html",
     "main.bce886e1.css.map": "/practice-agency/static/css/main.bce886e1.css.map",
-    "main.1d13a17b.js.map": "/practice-agency/static/js/main.1d13a17b.js.map",
+    "main.0db0c85e.js.map": "/practice-agency/static/js/main.0db0c85e.js.map",
     "787.28cb0dcd.chunk.js.map": "/practice-agency/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bce886e1.css",
-    "static/js/main.1d13a17b.js"
+    "static/js/main.0db0c85e.js"
   ]
 }
