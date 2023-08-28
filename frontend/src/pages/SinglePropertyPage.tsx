@@ -170,7 +170,7 @@ const SinglePropertyPage = () => {
 				{
 					checkIfHasFloorplan() ?
 						<div className="feature">
-							<i className="material-icons ft-icon">border_all</i> Floorplan
+							<i className="fa fa-arrows-alt ft-icon" /> Floorplan
 						</div>
 						:
 						<Fragment />
