@@ -50,7 +50,7 @@ const SinglePropertyPage = () => {
 
 	useEffect(() => {
 		fetchProperty();
-	}, [id, fetchProperty])
+	}, [id])
 
 	useEffect(() => {
 		setLoading(!property.hasOwnProperty('id'));

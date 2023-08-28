@@ -59,11 +59,11 @@ const ResultsPage = () => {
 
 	useEffect(() => {
 		fetchResults();
-	})
+	}, [])
 
 	useEffect(() => {
 		setLoading(results.length === 0 && !emptyResults);
-	}, [results, emptyResults])
+	}, [results])
 
 	function getResultInfo(title: string, bedrooms: number, bathrooms: number, description: string) {
 
